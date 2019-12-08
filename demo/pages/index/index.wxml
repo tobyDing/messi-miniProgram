@@ -1,0 +1,7 @@
+<view class="page-item">
+  <scroll-view scroll-y="{{true}}">
+    <block wx:for="{{list}}" wx:key="*this">
+      <button type="primary" size="default" bindtap="onTap" data-index="{{index}}">{{item.name}}</button>
+    </block>
+  </scroll-view>
+</view>

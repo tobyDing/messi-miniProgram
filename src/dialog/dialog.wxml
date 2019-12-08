@@ -1,0 +1,30 @@
+<view wx:if="{{mask}}" class="messi-dialog-mask {{!show?'messi-dialog-mask__hidden':''}}" bindtap="onClose"></view>
+<view wx:if="{{show}}" class="messi-dialog-wrap" bindtap="onClose">
+  <view class="messi-dialog" catchtap="stopEvent">
+    <view class="messi-dialog__hd">
+      <view class="messi-dialog__title">
+        {{title}}
+        <slot name="title"></slot>
+      </view>
+    </view>
+    <view class="messi-dialog__bd">
+      <slot></slot>
+    </view>
+    <view class="messi-dialog__ft">
+      <!-- buttons -->
+      <block wx:if="{{buttons.length>0}}">
+        <view 
+            wx:for="{{buttons}}"
+            wx:key="*this" 
+            class="messi-btn {{item.className}} {{buttons.length==1?'btn-one':''}}" 
+            data-index="{{index}}" 
+            bindtap="buttonTap"
+          >
+          {{item.text}}
+        </view>
+      </block>
+      <!-- <view class="messi-btn messi-btn__plain">取消</view>
+      <view class="messi-btn messi-btn__primary">确定</view> -->
+    </view>
+  </view>
+</view>

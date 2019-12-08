@@ -1,0 +1,88 @@
+
+.messi-dialog-mask {
+  position  : fixed;
+  z-index   : 1000;
+  left      : 0;
+  top       : 0;
+  right     : 0;
+  bottom    : 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition: all 0.3s ease-in;
+}
+
+.messi-dialog-mask__hidden{
+  opacity: 0;
+  transform: scale3d(1, 1, 0)
+}
+
+.messi-dialog-wrap {
+  position       : fixed;
+  z-index        : 5000;
+  left           : 32rpx;
+  top            : 32rpx;
+  right          : 32rpx;
+  bottom         : 32rpx;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  font-size      : 0;
+}
+
+.messi-dialog {
+  display       : flex;
+  flex-direction: column;
+  overflow      : hidden;
+  width         : 640rpx;
+  max-height    : 80%;
+  text-align    : center;
+  border-radius : 10rpx;
+  font-size     : 30rpx;
+  background    : #fff;
+}
+
+.messi-dialog__hd {
+  padding: 20rpx;
+}
+
+.messi-dialog__title {
+  font-size  : 36rpx;
+  font-weight: 700;
+  color      : #333;
+}
+
+.messi-dialog__bd {
+  flex           : 1;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  overflow-y     : auto;
+  min-height     : 80rpx;
+  padding        : 20rpx;
+  color          : #999;
+  word-wrap      : break-word;
+  -webkit-hyphens: auto;
+  hyphens        : auto;
+}
+
+.messi-dialog__ft {
+  display        : flex;
+  flex-direction : row;
+  justify-content: center;
+  padding        : 20rpx;
+}
+
+.messi-btn {
+  flex        : 1;
+  margin-right: 20rpx;
+}
+
+.messi-btn:last-child {
+  margin-right: 0;
+}
+
+.messi-btn.btn-one {
+  flex: 0 0 300rpx;
+}

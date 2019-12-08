@@ -1,0 +1,14 @@
+page {
+  display        : flex;
+  flex-direction : column;
+  height         : 100%;
+  font-family    : Helvetica Neue, Helvetica, sans-serif;
+}
+
+.page-item {
+  flex: 1;
+}
+
+.scroll-view {
+  height: 100%;
+}

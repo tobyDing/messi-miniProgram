@@ -1,0 +1,39 @@
+{
+  "name": "messi-miniprogram",
+  "version": "1.0.0",
+  "description": "Messi UI for miniProgram",
+  "main": "miniprogram_dist/index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "watch": "gulp watch",
+    "build": "gulp dev --build"
+  },
+  "miniprogram": "miniprogram_dist",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tobyDing/messi-miniprogram.git"
+  },
+  "keywords": [
+    "messi",
+    "UI",
+    "miniprogram",
+    "weapp",
+    "app"
+  ],
+  "author": "TobyDing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobyDing/messi-miniprogram/issues"
+  },
+  "homepage": "https://github.com/tobyDing/messi-miniprogram#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "moment": "^2.24.0",
+    "through2": "^3.0.1"
+  }
+}

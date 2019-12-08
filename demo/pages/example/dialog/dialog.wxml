@@ -1,0 +1,13 @@
+<view class="">
+  <dialog
+    show="{{show}}"
+    buttons="{{buttons}}"
+    bindbuttontap="onConfirm"
+    bindclose="onClose"
+  >
+    <view class="">
+      <view class="">特快寄：提供特别快的寄送服务</view>
+      <view class="">特惠寄：提供特别便宜的寄送服务</view>
+    </view>
+  </dialog>
+</view>
