@@ -33,6 +33,12 @@ gulp.task('clean', async () => {
   await del(demoDist)
 })
 
+gulp.task('demo-project', async () => {
+  await del(`${demoSrc}/project.config.json`)
+  await gulp.src(`${demoDist}/project.config.json`)
+    .pipe(gulp.dest(demoSrc))
+})
+
 gulp.task('demo', async () => {
   await gulp.src(`${demoSrc}/**`)
     .pipe(gulp.dest(demoDist))

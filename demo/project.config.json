@@ -54,14 +54,7 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "对话框",
-					"pathName": "pages/dialog/dialog",
-					"scene": null
-				}
-			]
+			"list": []
 		}
 	}
 }

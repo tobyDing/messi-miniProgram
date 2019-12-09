@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "gulp dev",
     "watch": "gulp watch",
-    "build": "gulp dev --build"
+    "build": "gulp dev --build",
+    "project": "gulp demo-project"
   },
   "miniprogram": "miniprogram_dist",
   "repository": {
