@@ -1,4 +1,74 @@
-button{
-  width: 100%;
-  margin: 20rpx;
+.page_hd_title {
+  padding    : 20rpx;
+  text-align : center;
+  font-size  : 36rpx;
+  font-weight: 700;
+}
+
+.page_hd_desc {
+  padding    : 0 40rpx 20rpx;
+  line-height: 1.5;
+  font-size  : 26rpx;
+  color      : #666;
+}
+
+.card {
+  margin    : 20rpx;
+  font-size : 30rpx;
+  background: #fff;
+}
+
+.card-hd {
+  padding        : 30rpx 20rpx;
+  display        : flex;
+  justify-content: space-between;
+}
+
+.card-hd_name {
+  font-size: 30rpx;
+}
+
+.card-hd .messifont {
+  margin-top: 5rpx;
+}
+
+.card-bd {
+  height  : 0;
+  overflow: hidden;
+}
+
+.card-bd_wrap {
+  transform : translateY(-50%);
+  transition: all .3s ease-in;
+}
+
+.card-bd_wrap_open {
+  transform: translateY(0);
+}
+
+.card-bd_open {
+  height: auto;
+}
+
+.card-bd_item {
+  padding        : 20rpx;
+  display        : flex;
+  justify-content: space-between;
+  border-top     : 1px solid #e6e6e6;
+}
+
+.card-bd_item_name {
+  font-size: 28rpx;
+}
+
+.card-bd_item .messifont-right {
+  margin-top: 8rpx;
+  font-size : 26rpx;
+}
+
+.page_ft {
+  padding   : 30rpx;
+  text-align: center;
+  font-size : 28rpx;
+  color     : #999;
 }

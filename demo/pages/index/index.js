@@ -2,18 +2,48 @@
 Page({
   data: {
     list: [
-      { name: '对话框', url: '/pages/example/dialog/dialog' }
+      {
+        id: 'Data Entry',
+        name: '数据输入',
+        icon: 'messifont-entry',
+        open: false,
+        child: ['button', 'picker', 'tab']
+      },
+      {
+        id: 'Data Display',
+        name: '数据展示',
+        icon: 'messifont-display',
+        open: false,
+        child: ['icon', 'accordion', 'grid', 'noticebar', 'listview', 'tips']
+      },
+      {
+        id: 'Gesture',
+        name: '手势操作',
+        icon: 'messifont-gesture',
+        open: false,
+        child: ['slideview']
+      },
+      {
+        id: 'Feedback',
+        name: '操作反馈',
+        icon: 'messifont-success',
+        open: false,
+        child: ['toast', 'message', 'dialog', 'half-screen-dialog', 'actionSheet']
+      }
     ]
   },
-  onLoad() {
-
-  },
-  onTap(ev) {
-    const { dataset: { index } } = ev.currentTarget;
+  onSwitch(ev) {
+    const { dataset: { index } } = ev.currentTarget
     const { list } = this.data;
-    const item = list[index];
+    list[index].open = !list[index].open
+    this.setData({
+      list
+    })
+  },
+  onJump(ev) {
+    const { dataset: { txt } } = ev.currentTarget
     wx.navigateTo({
-      url: item.url
+      url: `/pages/example/${txt}/${txt}`
     })
   }
 })

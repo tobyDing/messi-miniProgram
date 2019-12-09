@@ -1,14 +1,10 @@
+@import "./css/iconfont.wxss";
+
 page {
-  display        : flex;
-  flex-direction : column;
-  height         : 100%;
-  font-family    : Helvetica Neue, Helvetica, sans-serif;
+  color     : #333;
+  background: #f2f2f2;
 }
 
-.page-item {
-  flex: 1;
-}
-
-.scroll-view {
-  height: 100%;
+.view-hover-opacity {
+  opacity: 0.5;
 }

@@ -1,4 +1,4 @@
 node_modules
 .vscode
-miniprogram_dev/**
-miniprogram_dist/**
+miniprogram_dev
+miniprogram_dist
