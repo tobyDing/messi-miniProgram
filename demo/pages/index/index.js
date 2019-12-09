@@ -7,7 +7,7 @@ Page({
         name: '数据输入',
         icon: 'messifont-entry',
         open: false,
-        child: ['button', 'picker', 'tab']
+        child: ['picker', 'tab']
       },
       {
         id: 'Data Display',
