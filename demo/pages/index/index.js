@@ -28,7 +28,7 @@ Page({
         name: '操作反馈',
         icon: 'messifont-success',
         open: false,
-        child: ['toast', 'message', 'dialog', 'half-screen-dialog', 'actionSheet']
+        child: ['toast', 'message', 'dialog', 'half-screen-dialog', 'actionsheet']
       }
     ]
   },

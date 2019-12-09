@@ -1,7 +1,20 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/example/dialog/dialog"
+    "pages/example/button/button",
+    "pages/example/picker/picker",
+    "pages/example/tab/tab",
+    "pages/example/icon/icon",
+    "pages/example/accordion/accordion",
+    "pages/example/grid/grid",
+    "pages/example/noticebar/noticebar",
+    "pages/example/listview/listview",
+    "pages/example/tips/tips",
+    "pages/example/slideview/slideview",
+    "pages/example/toast/toast",
+    "pages/example/message/message",
+    "pages/example/dialog/dialog",
+    "pages/example/actionsheet/actionsheet"
   ],
   "window": {
     "backgroundTextStyle": "light",

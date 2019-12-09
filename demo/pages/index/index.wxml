@@ -19,5 +19,7 @@
       </view>
     </view>
   </view>
-  <view class="page_ft">--- MESSI UI 出品 ---</view>
+  <view class="page_ft">
+    <text class="page_ft_txt">By MESSI UI</text>
+  </view>
 </view>

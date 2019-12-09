@@ -24,12 +24,11 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.3",
 	"appid": "wx182ccbd2b3f55422",
-	"projectname": "%E7%94%9C%E6%A9%99%E9%9F%B3%E4%B9%90",
-	"cloudfunctionTemplateRoot": "",
+	"projectname": "Messi%20UI",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"scripts": {},
+	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -46,6 +45,11 @@
 			"list": []
 		},
 		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -55,7 +59,6 @@
 					"id": -1,
 					"name": "对话框",
 					"pathName": "pages/dialog/dialog",
-					"query": "",
 					"scene": null
 				}
 			]

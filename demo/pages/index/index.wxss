@@ -1,26 +1,26 @@
 .page_hd_title {
-  padding    : 20rpx;
-  text-align : center;
-  font-size  : 36rpx;
+  padding: 20rpx;
+  text-align: center;
+  font-size: 36rpx;
   font-weight: 700;
 }
 
 .page_hd_desc {
-  padding    : 0 40rpx 20rpx;
+  padding: 0 40rpx 20rpx;
   line-height: 1.5;
-  font-size  : 26rpx;
-  color      : #666;
+  font-size: 26rpx;
+  color: #666;
 }
 
 .card {
-  margin    : 20rpx;
-  font-size : 30rpx;
+  margin: 20rpx;
+  font-size: 30rpx;
   background: #fff;
 }
 
 .card-hd {
-  padding        : 30rpx 20rpx;
-  display        : flex;
+  padding: 30rpx 20rpx;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -33,12 +33,12 @@
 }
 
 .card-bd {
-  height  : 0;
+  height: 0;
   overflow: hidden;
 }
 
 .card-bd_wrap {
-  transform : translateY(-50%);
+  transform: translateY(-50%);
   transition: all .3s ease-in;
 }
 
@@ -51,10 +51,10 @@
 }
 
 .card-bd_item {
-  padding        : 20rpx;
-  display        : flex;
+  padding: 20rpx;
+  display: flex;
   justify-content: space-between;
-  border-top     : 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
 }
 
 .card-bd_item_name {
@@ -63,12 +63,33 @@
 
 .card-bd_item .messifont-right {
   margin-top: 8rpx;
-  font-size : 26rpx;
+  font-size: 26rpx;
 }
 
 .page_ft {
-  padding   : 30rpx;
+  padding: 30rpx;
   text-align: center;
-  font-size : 28rpx;
-  color     : #999;
+  font-size: 26rpx;
+  color: #ccc;
+}
+
+.page_ft_txt{
+  position: relative;
+}
+
+.page_ft_txt::before, .page_ft_txt::after {
+  content: "";
+  position: absolute;
+  top: 18rpx;
+  width: 50rpx;
+  height: 1px;
+  background: #ccc;
+}
+
+.page_ft_txt::before {
+  left: -65rpx;
+}
+
+.page_ft_txt::after {
+  right: -65rpx;
 }
