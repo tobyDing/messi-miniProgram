@@ -7,7 +7,6 @@
     "pages/example/grid/grid",
     "pages/example/noticebar/noticebar",
     "pages/example/listview/listview",
-    "pages/example/tips/tips",
     "pages/example/slideview/slideview",
     "pages/example/toast/toast",
     "pages/example/message/message",
