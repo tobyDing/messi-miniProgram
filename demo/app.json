@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/example/picker/picker",
     "pages/example/tab/tab",
-    "pages/example/icon/icon",
     "pages/example/accordion/accordion",
     "pages/example/grid/grid",
     "pages/example/noticebar/noticebar",

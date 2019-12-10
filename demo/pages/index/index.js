@@ -7,28 +7,32 @@ Page({
         name: '数据输入',
         icon: 'messifont-entry',
         open: false,
-        child: ['picker', 'tab']
+        child: ['picker'],
+        devChild: ['tab']
       },
       {
         id: 'Data Display',
         name: '数据展示',
         icon: 'messifont-display',
         open: false,
-        child: ['icon', 'accordion', 'grid', 'noticebar', 'listview', 'tips']
-      },
-      {
-        id: 'Gesture',
-        name: '手势操作',
-        icon: 'messifont-gesture',
-        open: false,
-        child: ['slideview']
+        child: ['accordion', 'grid', 'noticebar', 'listview', 'tips'],
+        devChild: [],
       },
       {
         id: 'Feedback',
         name: '操作反馈',
         icon: 'messifont-success',
         open: false,
-        child: ['toast', 'message', 'dialog', 'half-screen-dialog', 'actionsheet']
+        child: ['toast', 'message', 'dialog', 'actionsheet'],
+        devChild: ['half-screen-dialog'],
+      },
+      {
+        id: 'Gesture',
+        name: '手势操作',
+        icon: 'messifont-gesture',
+        open: false,
+        child: ['slideview'],
+        devChild: [],
       }
     ]
   },
