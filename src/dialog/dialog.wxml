@@ -11,7 +11,6 @@
       <slot></slot>
     </view>
     <view class="messi-dialog__ft">
-      <!-- buttons -->
       <block wx:if="{{buttons.length>0}}">
         <view 
             wx:for="{{buttons}}"
@@ -23,8 +22,6 @@
           {{item.text}}
         </view>
       </block>
-      <!-- <view class="messi-btn messi-btn__plain">取消</view>
-      <view class="messi-btn messi-btn__primary">确定</view> -->
     </view>
   </view>
 </view>

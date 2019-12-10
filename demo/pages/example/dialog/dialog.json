@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "dialog": "/components/dialog/dialog"
+    "ms-dialog": "/components/dialog/dialog"
   }
 }

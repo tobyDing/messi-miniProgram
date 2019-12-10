@@ -1,8 +1,33 @@
 @import "./css/iconfont.wxss";
-
 page {
-  color     : #333;
+  color: #333;
   background: #f2f2f2;
+}
+
+.p-title {
+  padding: 30rpx 40rpx 15rpx;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.p-desc {
+  padding: 0 40rpx 20rpx;
+  font-size: 26rpx;
+  color: #777;
+}
+
+.p-body {
+  padding: 20rpx 20rpx 100rpx;
+}
+
+.p-title2 {
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+
+.p-content button {
+  margin: 15rpx auto;
 }
 
 .view-hover-opacity {

@@ -1,13 +1,10 @@
-<view class="">
-  <dialog
-    show="{{show}}"
-    buttons="{{buttons}}"
-    bindbuttontap="onConfirm"
-    bindclose="onClose"
-  >
-    <view class="">
-      <view class="">特快寄：提供特别快的寄送服务</view>
-      <view class="">特惠寄：提供特别便宜的寄送服务</view>
+<view>
+  <view class="p-title">Dialog</view>
+  <view class="p-desc">对话框</view>
+  <view class="p-body">
+    <view class="p-title2">提示弹窗</view>
+    <view class="p-content">
+      <button type="primary">提示弹窗</button>
     </view>
-  </dialog>
+  </view>
 </view>
