@@ -1,2 +1,3 @@
-<!--pages/example/toast/toast.wxml-->
-<text>pages/example/toast/toast.wxml</text>
+<view>
+  <view class="page-title">Toast</view>
+</view>

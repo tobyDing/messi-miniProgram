@@ -1,1 +1,4 @@
-/* pages/example/toast/toast.wxss */
+.page-title{
+  padding: 30rpx 20rpx;
+  text-align: center;
+}

@@ -13,8 +13,10 @@ const config = require('./config')
 const {
   demoSrc,
   demoDist,
+  demoIgnore,
   componentsSrc,
-  componentsDist
+  componentsDist,
+  componentTmp,
 } = config
 
 const logger = (source = 'components') => {
@@ -40,7 +42,7 @@ gulp.task('demo-project', async () => {
 })
 
 gulp.task('demo', async () => {
-  await gulp.src(`${demoSrc}/**`)
+  await gulp.src([`${demoSrc}/**`,].concat(demoIgnore))
     .pipe(gulp.dest(demoDist))
 })
 
@@ -53,6 +55,27 @@ gulp.task('components', async () => {
     .pipe(gulp.src([`${componentsSrc}/**`, `!${componentsSrc}/**/*.less`]))
     .pipe(logger())
     .pipe(gulp.dest(componentsDist))
+})
+
+gulp.task('create-componet', async () => {
+  const compName = process.env.npm_config_comp;
+  if (!compName) {
+    console.log('请参考用法:', `${'npm run create --comp=组件名'}`.green)
+    return;
+  }
+  await console.log(`正在创建组件${compName}...`.green)
+  await gulp.src(`${componentTmp}/**`)
+    .pipe(rename(function (path) {
+      if (path.basename) {
+        return {
+          dirname: path.dirname,
+          basename: compName,
+          extname: path.extname
+        }
+      }
+    }))
+    .pipe(gulp.dest(`${componentsSrc}/${compName}`, { overwrite: false }))
+  await console.log(`组件${compName}已创建完成!`.green)
 })
 
 gulp.task('dev', gulp.series('clean', 'demo', 'components'))
