@@ -15,7 +15,7 @@ Page({
         name: '数据展示',
         icon: 'messifont-display',
         open: false,
-        child: ['accordion', 'grid', 'noticebar', 'listview', 'tips'],
+        child: ['accordion', 'grid', 'noticebar', 'listview'],
         devChild: [],
       },
       {
