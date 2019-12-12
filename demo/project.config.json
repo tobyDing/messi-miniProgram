@@ -25,10 +25,11 @@
 	"libVersion": "2.9.3",
 	"appid": "wx182ccbd2b3f55422",
 	"projectname": "Messi%20UI",
+	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
+	"scripts": {},
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -45,7 +46,6 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"gamePlugin": {
@@ -54,7 +54,21 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "toast",
+					"pathName": "pages/example/toast/toast",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dialog",
+					"pathName": "pages/example/dialog/dialog",
+					"scene": null
+				}
+			]
 		}
 	}
 }
