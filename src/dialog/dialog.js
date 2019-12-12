@@ -33,7 +33,10 @@ Component({
     }
   },
   data: {},
-  ready() { },
+  ready() {
+    const pages = getCurrentPages()
+    console.log(pages)
+  },
   methods: {
     onClose() {
       const { maskClosable } = this.data;
