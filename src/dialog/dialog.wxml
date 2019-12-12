@@ -2,7 +2,7 @@
 <view wx:if="{{visible}}" class="messi-dialog-wrap" bindtap="onClose">
   <view class="messi-dialog" catchtap="stopEvent">
     <view class="messi-dialog__hd">
-      <view class="messi-dialog__title">
+      <view class="messi-dialog__hd_title">
         {{title}}
         <slot name="title"></slot>
       </view>

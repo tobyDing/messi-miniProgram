@@ -11,11 +11,10 @@
   opacity   : 1;
   transform : scale3d(1, 1, 1);
   transition: all 0.3s ease-in;
-}
-
-.messi-dialog-mask__hidden {
-  opacity  : 0;
-  transform: scale3d(1, 1, 0)
+  &__hidden {
+    opacity  : 0;
+    transform: scale3d(1, 1, 0)
+  }
 }
 
 .messi-dialog-wrap {
@@ -44,54 +43,50 @@
   border-radius : @radius-lg;
   font-size     : @size-md;
   background    : #fff;
-}
 
-.messi-dialog__hd {
-  padding: @padding-lg @padding-md;
-}
+  &__hd {
+    padding: @padding-lg @padding-md;
+    &_title {
+      font-size  : @size-lg3;
+      font-weight: 700;
+      color      : @color-black;
+    }
+  }
 
-.messi-dialog__title {
-  font-size  : @size-lg3;
-  font-weight: 700;
-  color      : @color-black;
-}
-
-.messi-dialog__bd {
-  flex           : 1;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  overflow-y     : auto;
-  min-height     : 80rpx;
-  padding        : @padding-md;
-  word-wrap      : break-word;
-  -webkit-hyphens: auto;
-  hyphens        : auto;
-}
-
-.messi-dialog__ft {
-  display        : flex;
-  flex-direction : row;
-  justify-content: center;
-  margin-top     : @padding-lg;
-  border-top     : 1rpx solid #eee;
+  &__bd {
+    flex           : 1;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    overflow-y     : auto;
+    min-height     : 80rpx;
+    padding        : @padding-md;
+    word-wrap      : break-word;
+    -webkit-hyphens: auto;
+    hyphens        : auto;
+  }
+  
+  &__ft {
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    margin-top     : @padding-lg;
+    border-top     : 1rpx solid #eee;
+  }
 }
 
 .messi-btn {
   flex        : 1;
   padding     : @padding-lg;
   border-right: 1rpx solid #eee;
-}
-
-.messi-btn_primary {
-  color: @color-primary;
-}
-
-.messi-btn_second {
-  color: @color-light6;
-}
-
-.messi-btn:last-child {
-  margin-right: 0;
-  border-right: none;
+  &:last-child {
+    margin-right: 0;
+    border-right: none;
+  }
+  &_primary {
+    color: @color-primary;
+  }
+  &_second {
+    color: @color-light6;
+  }
 }

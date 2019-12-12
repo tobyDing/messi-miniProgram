@@ -1,4 +1,3 @@
-
 Component({
   options: {
     multipleSlots: true,
