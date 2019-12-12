@@ -2,9 +2,14 @@
   <view class="p-title">Dialog</view>
   <view class="p-desc">对话框</view>
   <view class="p-body">
-    <view class="p-title2">提示弹窗</view>
+    <!-- <view class="p-title2">普通弹窗</view> -->
     <view class="p-content">
-      <button type="primary">提示弹窗</button>
+      <button type="primary" bindtap="onTap" data-type="TipsDialog">提示弹窗</button>
+    </view>
+    <view class="p-content">
+      <button type="primary" bindtap="onTap" data-type="ConfirmDialog">确认弹窗</button>
     </view>
   </view>
 </view>
+<ms-dialog visible="{{TipsDialog}}">这是提示弹窗</ms-dialog>
+<ms-dialog visible="{{ConfirmDialog}}" buttons="{{ConfirmDialogObj.buttons}}">这里是确认弹窗</ms-dialog>

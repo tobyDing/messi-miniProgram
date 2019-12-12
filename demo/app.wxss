@@ -26,6 +26,10 @@ page {
   font-size: 30rpx;
 }
 
+.p-content{
+  padding: 20rpx;
+}
+
 .p-content button {
   margin: 15rpx auto;
 }

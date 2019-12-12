@@ -1,3 +1,4 @@
+@import "../theme/index.less";
 
 .messi-dialog-mask {
   position  : fixed;
@@ -7,13 +8,13 @@
   right     : 0;
   bottom    : 0;
   background: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  transform: scale3d(1, 1, 1);
+  opacity   : 1;
+  transform : scale3d(1, 1, 1);
   transition: all 0.3s ease-in;
 }
 
-.messi-dialog-mask__hidden{
-  opacity: 0;
+.messi-dialog-mask__hidden {
+  opacity  : 0;
   transform: scale3d(1, 1, 0)
 }
 
@@ -35,22 +36,24 @@
   display       : flex;
   flex-direction: column;
   overflow      : hidden;
-  width         : 640rpx;
+  margin-top    : -100rpx;
+  width         : 90%;
+  max-width     : 640rpx;
   max-height    : 80%;
   text-align    : center;
-  border-radius : 10rpx;
-  font-size     : 30rpx;
+  border-radius : @radius-lg;
+  font-size     : @size-md;
   background    : #fff;
 }
 
 .messi-dialog__hd {
-  padding: 20rpx;
+  padding: @padding-lg @padding-md;
 }
 
 .messi-dialog__title {
-  font-size  : 36rpx;
+  font-size  : @size-lg3;
   font-weight: 700;
-  color      : #333;
+  color      : @color-black;
 }
 
 .messi-dialog__bd {
@@ -60,8 +63,7 @@
   justify-content: center;
   overflow-y     : auto;
   min-height     : 80rpx;
-  padding        : 20rpx;
-  color          : #999;
+  padding        : @padding-md;
   word-wrap      : break-word;
   -webkit-hyphens: auto;
   hyphens        : auto;
@@ -71,18 +73,25 @@
   display        : flex;
   flex-direction : row;
   justify-content: center;
-  padding        : 20rpx;
+  margin-top     : @padding-lg;
+  border-top     : 1rpx solid #eee;
 }
 
 .messi-btn {
   flex        : 1;
-  margin-right: 20rpx;
+  padding     : @padding-lg;
+  border-right: 1rpx solid #eee;
+}
+
+.messi-btn_primary {
+  color: @color-primary;
+}
+
+.messi-btn_second {
+  color: @color-light6;
 }
 
 .messi-btn:last-child {
   margin-right: 0;
-}
-
-.messi-btn.btn-one {
-  flex: 0 0 300rpx;
+  border-right: none;
 }

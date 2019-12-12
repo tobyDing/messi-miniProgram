@@ -21,17 +21,20 @@ Component({
       type: String,
       value: '温馨提示'
     },
-    show: {
+    visible: {
       type: Boolean,
       value: false
     },
     buttons: {
       type: Array,
-      value: []
+      value: [
+        { className: 'messi-btn_second', text: '取消', action: 'cancel' },
+        { className: 'messi-btn_primary', text: '确定' }
+      ]
     }
   },
   data: {},
-  ready() {},
+  ready() { },
   methods: {
     onClose() {
       const { maskClosable } = this.data;
@@ -39,15 +42,19 @@ Component({
         return;
       }
       this.setData({
-        show: false
+        visible: false
       })
       this.triggerEvent('close', {}, {})
     },
     buttonTap(ev) {
-      const { dataset: { index } } = ev.currentTarget;
+      const { dataset: { index, action = 'normal' } } = ev.currentTarget;
+      if (action == 'cancel') {
+        this.onClose()
+      }
       this.triggerEvent('buttontap', {
         index,
-        item: this.data.buttons[index]
+        item: this.data.buttons[index],
+        ev: ev || {}
       }, {})
     },
     stopEvent() { }
