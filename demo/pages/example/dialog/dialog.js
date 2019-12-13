@@ -7,6 +7,13 @@ Page({
       ]
     }
   },
+  onLoad(){
+    // console.log(this.$MsDialog)
+    this.$MsDialog({
+      visible:true,
+      content:'这是基于JS调用的对话框组件'
+    })
+  },
   onTap(ev) {
     const { dataset: { type } } = ev.currentTarget || {};
     this.setData({

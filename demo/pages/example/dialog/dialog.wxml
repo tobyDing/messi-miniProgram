@@ -11,5 +11,6 @@
     </view>
   </view>
 </view>
+<ms-dialog name="system"></ms-dialog>
 <ms-dialog visible="{{TipsDialog}}">这是提示弹窗</ms-dialog>
 <ms-dialog visible="{{ConfirmDialog}}" buttons="{{ConfirmDialogObj.buttons}}">这里是确认弹窗</ms-dialog>

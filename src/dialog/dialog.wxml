@@ -1,14 +1,15 @@
 <view wx:if="{{mask}}" class="messi-dialog-mask {{!visible?'messi-dialog-mask__hidden':''}}" bindtap="onClose"></view>
-<view wx:if="{{visible}}" class="messi-dialog-wrap" bindtap="onClose">
+<view wx:if="{{visible}}" class="messi-dialog-wrap {{extClass}}" bindtap="onClose">
   <view class="messi-dialog" catchtap="stopEvent">
     <view class="messi-dialog__hd">
       <view class="messi-dialog__hd_title">
-        {{title}}
-        <slot name="title"></slot>
+        <block wx:if="{{title}}">{{title}}</block>
+        <slot wx:else name="title"></slot>
       </view>
     </view>
     <view class="messi-dialog__bd">
-      <slot></slot>
+      <block wx:if="{{content}}">{{content}}</block>
+      <slot wx:else></slot>
     </view>
     <view class="messi-dialog__ft">
       <block wx:if="{{buttons.length>0}}">
