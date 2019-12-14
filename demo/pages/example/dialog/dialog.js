@@ -1,13 +1,7 @@
 import MsDialog from '../../../components/dialog/index'
 
 Page({
-  data: {
-    ConfirmDialogObj: {
-      buttons: [
-        { className: 'messi-btn_primary', text: '确认', action: 'cancel' }
-      ]
-    }
-  },
+  data: {},
   onLoad() { },
   onTipsDialog() {
     MsDialog.alert({
