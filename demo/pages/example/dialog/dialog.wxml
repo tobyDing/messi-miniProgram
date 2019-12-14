@@ -4,13 +4,17 @@
   <view class="p-body">
     <!-- <view class="p-title2">普通弹窗</view> -->
     <view class="p-content">
-      <button type="primary" bindtap="onTap" data-type="TipsDialog">提示弹窗</button>
+      <button type="primary" bindtap="onTipsDialog">提示弹窗</button>
     </view>
     <view class="p-content">
-      <button type="primary" bindtap="onTap" data-type="ConfirmDialog">确认弹窗</button>
+      <button type="primary" bindtap="onConfirmDialog" data-type="ConfirmDialog">确认弹窗</button>
+    </view>
+    <view class="p-content">
+      <button type="primary" bindtap="onComponentTap" >组件调用</button>
+      <ms-dialog visible="{{visible}}">
+        <image class="" src="https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg"/>
+      </ms-dialog>
     </view>
   </view>
 </view>
-<ms-dialog name="system"></ms-dialog>
-<ms-dialog visible="{{TipsDialog}}">这是提示弹窗</ms-dialog>
-<ms-dialog visible="{{ConfirmDialog}}" buttons="{{ConfirmDialogObj.buttons}}">这里是确认弹窗</ms-dialog>
+<ms-dialog id="ms-dialog"></ms-dialog>

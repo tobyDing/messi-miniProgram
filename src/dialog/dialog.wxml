@@ -19,7 +19,7 @@
             class="messi-btn {{item.className}}" 
             data-action="{{item.action||'normal'}}"
             data-index="{{index}}" 
-            bindtap="buttonTap"
+            bindtap="onButtonsTap"
           >
           {{item.text}}
         </view>

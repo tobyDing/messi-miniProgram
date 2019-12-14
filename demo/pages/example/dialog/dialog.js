@@ -1,3 +1,4 @@
+import MsDialog from '../../../components/dialog/index'
 
 Page({
   data: {
@@ -7,17 +8,35 @@ Page({
       ]
     }
   },
-  onLoad(){
-    // console.log(this.$MsDialog)
-    this.$MsDialog({
-      visible:true,
-      content:'这是基于JS调用的对话框组件'
+  onLoad() {
+
+  },
+  onTipsDialog() {
+    MsDialog.alert({
+      title: '提示弹窗',
+      content: '这是提示弹窗',
+      onButtonsTap(ev) {
+        console.log('ev', ev)
+      },
+      onClose() {
+        console.log('onClose')
+      }
     })
   },
-  onTap(ev) {
-    const { dataset: { type } } = ev.currentTarget || {};
+  onConfirmDialog() {
+    MsDialog.alert({
+      content: '这是确认弹窗',
+      buttons: [
+        { className: 'messi-btn_primary', text: '知道了', action: 'cancel' }
+      ],
+      onButtonsTap(ev) {
+        console.log('ev', ev)
+      }
+    })
+  },
+  onComponentTap(ev) {
     this.setData({
-      [type]: true
+      visible:true
     })
   }
 })
