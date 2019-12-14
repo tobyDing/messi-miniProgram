@@ -1,2 +1,12 @@
-<!--pages/example/actionsheet/actionsheet.wxml-->
-<text>pages/example/actionsheet/actionsheet.wxml</text>
+<view>
+  <view class="p-title">Actionsheet</view>
+  <view class="p-desc">操作菜单</view>
+  <view class="p-body">
+    <view class="p-title2">基本用法</view>
+    <view class="p-content">
+      <button type="primary">底部弹出</button>
+      <button type="primary">中间弹出</button>
+      <button type="primary">顶部弹出</button>
+    </view>
+  </view>
+</view>

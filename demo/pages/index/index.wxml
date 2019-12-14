@@ -4,7 +4,7 @@
     <view class="page_hd_desc">这是一套基于微信小程序的扩展组件库，为原生小程序开发者提供开箱即用、简单可靠的微信小程序组件库。</view>
   </view>
   <view class="page_bd">
-    <view class="card" wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class="card" wx:for="{{list}}" wx:key="id">
       <view class="card-hd" bindtap="onSwitch" data-index="{{index}}" hover-class="view-hover-opacity">
         <view class="card-hd_name">{{item.name}}</view>
         <view class="messifont {{item.icon}}"></view>

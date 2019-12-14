@@ -1,0 +1,21 @@
+<view>
+  <view class="p-title">Toast</view>
+  <view class="p-desc">轻提示</view>
+  <view class="p-body">
+    <view class="p-title2">文字提示</view>
+    <view class="p-content">
+      <button type="primary">文字提示</button>
+      <button type="primary">长文字提示</button>
+    </view>
+    <view class="p-title2">加载提示</view>
+    <view class="p-conent">
+      <button type="primary">加载提示</button>
+    </view>
+    <view class="p-title2">带图标提示</view>
+    <view class="p-content">
+      <button type="primary">成功提示</button>
+      <button type="primary">失败提示</button>
+      <button type="primary">自定义图标提示</button>
+    </view>
+  </view>
+</view>
