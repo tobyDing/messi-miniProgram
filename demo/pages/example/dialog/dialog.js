@@ -8,9 +8,7 @@ Page({
       ]
     }
   },
-  onLoad() {
-
-  },
+  onLoad() { },
   onTipsDialog() {
     MsDialog.alert({
       title: '提示弹窗',
@@ -36,7 +34,7 @@ Page({
   },
   onComponentTap(ev) {
     this.setData({
-      visible:true
+      visible: true
     })
   }
 })
