@@ -1,6 +1,6 @@
 @import "../theme/index.less";
 
-.messi-dialog-wrap {
+.messi-dialog-container {
   position       : fixed;
   z-index        : 5000;
   left           : 32rpx;
@@ -12,68 +12,68 @@
   justify-content: center;
   align-items    : center;
   font-size      : 0;
-}
 
-.messi-dialog {
-  display       : flex;
-  flex-direction: column;
-  overflow      : hidden;
-  margin-top    : -100rpx;
-  width         : 90%;
-  max-width     : 640rpx;
-  max-height    : 80%;
-  text-align    : center;
-  border-radius : @radius-lg;
-  font-size     : @size-md;
-  background    : #fff;
+  .messi-dialog {
+    display       : flex;
+    flex-direction: column;
+    overflow      : hidden;
+    margin-top    : -100rpx;
+    width         : 90%;
+    max-width     : 640rpx;
+    max-height    : 80%;
+    text-align    : center;
+    border-radius : @radius-lg;
+    font-size     : @size-md;
+    background    : #fff;
 
-  &__hd {
-    padding: @padding-lg @padding-md;
+    &__hd {
+      padding: @padding-lg @padding-md;
 
-    &_title {
-      font-size  : @size-lg3;
-      font-weight: 700;
-      color      : @color-black;
+      &_title {
+        font-size  : @size-lg3;
+        font-weight: 700;
+        color      : @color-black;
+      }
+    }
+
+    &__bd {
+      flex           : 1;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      overflow-y     : auto;
+      min-height     : 80rpx;
+      padding        : @padding-md;
+      word-wrap      : break-word;
+      -webkit-hyphens: auto;
+      hyphens        : auto;
+    }
+
+    &__ft {
+      display        : flex;
+      flex-direction : row;
+      justify-content: center;
+      margin-top     : @padding-lg;
+      .border(top);
     }
   }
 
-  &__bd {
-    flex           : 1;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    overflow-y     : auto;
-    min-height     : 80rpx;
-    padding        : @padding-md;
-    word-wrap      : break-word;
-    -webkit-hyphens: auto;
-    hyphens        : auto;
-  }
+  .messi-btn {
+    flex   : 1;
+    padding: @padding-lg;
+    .border(right);
 
-  &__ft {
-    display        : flex;
-    flex-direction : row;
-    justify-content: center;
-    margin-top     : @padding-lg;
-    .border(top);
-  }
-}
+    &:last-child {
+      margin-right: 0;
+      border-right: none;
+    }
 
-.messi-btn {
-  flex   : 1;
-  padding: @padding-lg;
-  .border(right);
+    &_primary {
+      color: @color-primary;
+    }
 
-  &:last-child {
-    margin-right: 0;
-    border-right: none;
-  }
-
-  &_primary {
-    color: @color-primary;
-  }
-
-  &_second {
-    color: @color-light6;
+    &_second {
+      color: @color-light6;
+    }
   }
 }

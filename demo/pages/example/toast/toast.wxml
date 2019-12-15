@@ -19,3 +19,5 @@
     </view>
   </view>
 </view>
+
+<ms-toast id="ms-toast" visible="{{visible}}" type="loading" msg="加载中..."></ms-toast>

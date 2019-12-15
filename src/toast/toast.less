@@ -1,0 +1,40 @@
+@import "../theme/index.less";
+
+.ms-toast-container {
+  position : fixed;
+  top      : 50%;
+  left     : 50%;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  z-index  : 5000;
+  // hack for avoid max-width when use left & fixed
+  width     : fit-content;
+  max-width : 560rpx;
+  transition: all 0.5s ease-in-out;
+  opacity   : 1;
+
+  // &_hidden {
+  //   opacity  : 0;
+  //   transform: scale3d(1, 1, 0);
+  // }
+
+  .ms-toast {
+    padding      : @padding-sm @padding-md;
+    min-width    : 140rpx;
+    line-height  : 1.5;
+    text-align   : center;
+    font-size    : @size-md;
+    color        : #fff;
+    background   : rgba(0, 0, 0, 0.8);
+    border-radius: @radius-md;
+
+    &-icon {
+      width    : 100%;
+      font-size: 70rpx;
+
+      &_spinning {
+        font-size: 60rpx;
+        .animation(spinning)
+      }
+    }
+  }
+}

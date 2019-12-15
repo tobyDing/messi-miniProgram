@@ -1,3 +1,8 @@
-<view>
-  
+<ms-mask wx:if="{{!maskClickable}}" visible="{{visible}}" transparent="{{true}}"></ms-mask>
+<view wx:if="{{visible}}" class="ms-toast-container">
+  <view class="ms-toast">
+    <view class="ms-toast-icon ms-iconfont {{icon||iconMap[type]}} {{type==='loading'?'ms-toast-icon_spinning':''}}"></view>
+    <view wx:if="{{type==='loading'}}" class="ms-toast-msg">{{msg||'加载中...'}}</view>
+    <view wx:else class="ms-toast-msg">{{msg}}</view>
+  </view>
 </view>

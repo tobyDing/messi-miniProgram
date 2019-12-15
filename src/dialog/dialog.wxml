@@ -1,5 +1,5 @@
 <ms-mask wx:if="{{mask}}" visible="{{visible}}" bindtap="onClose"></ms-mask>
-<view wx:if="{{visible}}" class="messi-dialog-wrap {{extClass}}" bindtap="onClose">
+<view wx:if="{{visible}}" class="messi-dialog-container {{extClass}}" bindtap="onClose">
   <view class="messi-dialog" catchtap="stopEvent">
     <view class="messi-dialog__hd">
       <view class="messi-dialog__hd_title">
