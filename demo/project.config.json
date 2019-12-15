@@ -26,12 +26,13 @@
 	"appid": "wx182ccbd2b3f55422",
 	"projectname": "Messi%20UI",
 	"cloudfunctionTemplateRoot": "",
+	"watchOptions": {
+		"ignore": []
+	},
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"scripts": {},
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -53,8 +54,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 1,
 			"list": [
+				{
+					"id": -1,
+					"name": "dialog",
+					"pathName": "pages/example/dialog/dialog",
+					"query": "",
+					"scene": null
+				},
 				{
 					"id": -1,
 					"name": "toast",
@@ -64,8 +72,16 @@
 				},
 				{
 					"id": -1,
-					"name": "dialog",
-					"pathName": "pages/example/dialog/dialog",
+					"name": "message",
+					"pathName": "pages/example/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "actionsheet",
+					"pathName": "pages/example/actionsheet/actionsheet",
+					"query": "",
 					"scene": null
 				}
 			]
