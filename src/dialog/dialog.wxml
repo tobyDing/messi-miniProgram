@@ -1,4 +1,4 @@
-<view wx:if="{{mask}}" class="messi-dialog-mask {{!visible?'messi-dialog-mask__hidden':''}}" bindtap="onClose"></view>
+<ms-mask wx:if="{{mask}}" visible="{{visible}}" bindtap="onClose"></ms-mask>
 <view wx:if="{{visible}}" class="messi-dialog-wrap {{extClass}}" bindtap="onClose">
   <view class="messi-dialog" catchtap="stopEvent">
     <view class="messi-dialog__hd">

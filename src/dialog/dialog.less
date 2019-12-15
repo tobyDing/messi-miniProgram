@@ -1,22 +1,5 @@
 @import "../theme/index.less";
 
-.messi-dialog-mask {
-  position  : fixed;
-  z-index   : 1000;
-  left      : 0;
-  top       : 0;
-  right     : 0;
-  bottom    : 0;
-  background: rgba(0, 0, 0, 0.6);
-  opacity   : 1;
-  transform : scale3d(1, 1, 1);
-  transition: all 0.3s ease-in;
-  &__hidden {
-    opacity  : 0;
-    transform: scale3d(1, 1, 0)
-  }
-}
-
 .messi-dialog-wrap {
   position       : fixed;
   z-index        : 5000;
@@ -46,6 +29,7 @@
 
   &__hd {
     padding: @padding-lg @padding-md;
+
     &_title {
       font-size  : @size-lg3;
       font-weight: 700;
@@ -65,27 +49,30 @@
     -webkit-hyphens: auto;
     hyphens        : auto;
   }
-  
+
   &__ft {
     display        : flex;
     flex-direction : row;
     justify-content: center;
     margin-top     : @padding-lg;
-    border-top     : 1rpx solid #eee;
+    .border(top);
   }
 }
 
 .messi-btn {
-  flex        : 1;
-  padding     : @padding-lg;
-  border-right: 1rpx solid #eee;
+  flex   : 1;
+  padding: @padding-lg;
+  .border(right);
+
   &:last-child {
     margin-right: 0;
     border-right: none;
   }
+
   &_primary {
     color: @color-primary;
   }
+
   &_second {
     color: @color-light6;
   }

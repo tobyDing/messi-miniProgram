@@ -1,1 +1,18 @@
-// 边框
+/**
+* 边框
+*/
+.border{
+  border:1rpx solid #eee;
+}
+.border(@direction) when(@direction=top){
+  border-top: 1rpx solid #eee;
+}
+.border(@direction) when(@direction=right){
+  border-right: 1rpx solid #eee;
+}
+.border(@direction) when(@direction=bottom){
+  border-bottom: 1rpx solid #eee;
+}
+.border(@direction) when(@direction=left){
+  border-left: 1rpx solid #eee;
+}

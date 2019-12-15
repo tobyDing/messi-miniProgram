@@ -1,0 +1,1 @@
+<view class="messi-mask {{transparent && 'messi-mask_transparent'}} {{!visible?'messi-mask__hidden':''}}"></view>
