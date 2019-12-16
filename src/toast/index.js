@@ -1,4 +1,4 @@
-import { getPageObj, assign, isFunction } from '../utils/utils'
+import { getPageObj, assign, isFunction, isObj } from '../utils/utils'
 
 let queue = []
 
@@ -14,8 +14,12 @@ let defaultOptions = {
   cb: () => { },
 }
 
+let parseOptions = (options = {}) => {
+  return isObj(options) ? options : { msg: options }
+}
+
 const MsToast = options => {
-  options = assign(defaultOptions, options)
+  options = assign(defaultOptions, parseOptions(options))
   const pageObj = options.pageObj || getPageObj()
   const toast = pageObj.selectComponent(options.selector)
   return new Promise((resolve, reject) => {
@@ -57,21 +61,21 @@ MsToast.loading = options => {
   options = assign({
     type: 'loading',
     duration: -1
-  }, options)
+  }, parseOptions(options))
   return MsToast(options)
 }
 
 MsToast.success = options => {
   options = assign({
     type: 'success'
-  }, options)
+  }, parseOptions(options))
   return MsToast(options)
 }
 
 MsToast.error = options => {
   options = assign({
     type: 'error'
-  }, options)
+  }, parseOptions(options))
   return MsToast(options)
 }
 

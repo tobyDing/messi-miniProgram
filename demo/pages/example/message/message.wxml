@@ -4,10 +4,11 @@
   <view class="p-body">
     <view class="p-title2">基本用法</view>
     <view class="p-content">
-      <button type="primary">主要通知</button>
-      <button type="primary">成功通知</button>
-      <button type="primary">危险通知</button>
-      <button type="primary">警告通知</button>
+      <button type="primary" bindtap="onShowMessage">主要通知</button>
+      <button type="primary" bindtap="onShowMessageSuccess">成功通知</button>
+      <button type="primary" bindtap="onShowMessageDanger">危险通知</button>
+      <button type="primary" bindtap="onShowMessageWarning">警告通知</button>
     </view>
   </view>
 </view>
+<ms-message id="ms-message"></ms-message>

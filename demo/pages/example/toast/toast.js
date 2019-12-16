@@ -6,12 +6,13 @@ Page({
   },
   onLoad() { },
   onShowToast() {
-    MsToast({
-      msg: '这是简单文字提示',
-      cb() {
-        console.log('cb关闭了')
-      }
-    })
+    // MsToast({
+    //   msg: '这是简单文字提示',
+    //   cb() {
+    //     console.log('cb关闭了')
+    //   }
+    // })
+    MsToast('这是简单文字提示')
   },
   onShowToast2() {
     MsToast({
@@ -19,20 +20,23 @@ Page({
     })
   },
   onShowLoading() {
-    MsToast.loading()
+    // MsToast.loading()
+    MsToast.loading('请稍后...')
     // setTimeout(() => {
     //   MsToast.hide()
     // }, 5000);
   },
   onShowToastSuccess() {
-    MsToast.success({
-      msg: '成功提示'
-    })
+    // MsToast.success({
+    //   msg: '成功提示'
+    // })
+    MsToast.success('成功提示')
   },
   onShowToastError() {
-    MsToast.error({
-      msg: '失败提示'
-    })
+    // MsToast.error({
+    //   msg: '失败提示'
+    // })
+    MsToast.error('失败提示')
   },
   onShowToastIcon() {
     MsToast({

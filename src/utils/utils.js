@@ -12,7 +12,7 @@ const assign = (...arg) => {
   return Object.assign({}, ...arg)
 }
 
-const isFunction = (fn) => {
+const isFunction = fn => {
   /**
    * 判断是否为函数
    */
@@ -23,8 +23,17 @@ const isFunction = (fn) => {
   }
 }
 
+const isObj = obj => {
+  if (obj && Object.prototype.toString.call(obj) === '[object Object]') {
+    return true
+  } else {
+    return false
+  }
+}
+
 export {
   getPageObj,
-  isFunction,
   assign,
+  isFunction,
+  isObj,
 }
