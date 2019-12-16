@@ -6,7 +6,7 @@ Component({
     },
     visible: {
       type: Boolean,
-      value: true
+      value: false
     },
     transparent: {
       type: Boolean,

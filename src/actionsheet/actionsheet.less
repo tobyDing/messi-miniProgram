@@ -1,0 +1,50 @@
+@import "../theme/index.less";
+
+.messi-actionsheet-container {
+  position: fixed;
+  z-index : 5000;
+  width   : 100%;
+
+  &_bottom {
+    bottom   : 0;
+    left     : 50%;
+    transform: translateX(-50%);
+  }
+
+  &_center {
+    overflow     : hidden;
+    bottom       : none;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    width        : 65%;
+    border-radius: @radius-md;
+  }
+
+  .messi-actionsheet {
+    background: @color-light;
+
+    &-item {
+      height     : 90rpx;
+      line-height: 90rpx;
+      text-align : center;
+      font-size  : @size-md;
+      background : #fff;
+      .border(bottom);
+
+      &_desc {
+        margin-left: @padding-sm;
+        font-size  : @size-xs;
+        color      : @color-light5;
+      }
+
+      &_cancel {
+        color: @color-light5;
+      }
+    }
+
+    .showCancelGap {
+      margin-top: @padding-md;
+    }
+  }
+}

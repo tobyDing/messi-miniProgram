@@ -55,8 +55,7 @@ Component({
       const { dataset: { index, action = 'normal' } } = ev.currentTarget || {}
       const eventDetial = {
         index,
-        item: this.data.buttons[index],
-        ev: ev || {}
+        item: this.data.buttons[index]
       }
       this.triggerEvent('onButtonsTap', eventDetial, {})
       this.data.onButtonsTap && this.data.onButtonsTap(eventDetial)
