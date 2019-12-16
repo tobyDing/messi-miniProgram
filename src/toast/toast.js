@@ -1,20 +1,20 @@
 Component({
   properties: {
-    maskClickable: {
-      type: Boolean,
-      value: false
-    },
     visible: {
       type: Boolean,
-      value: true,
+      value: false,
+    },
+    type: {
+      type: String,
+      value: 'tips'
     },
     msg: {
       type: String,
       value: ''
     },
-    type: {
-      type: String,
-      value: 'tips'
+    maskClickable: {
+      type: Boolean,
+      value: false
     },
     icon: {
       type: String,
