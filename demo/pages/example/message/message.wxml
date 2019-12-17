@@ -2,7 +2,7 @@
   <view class="p-title">Message</view>
   <view class="p-desc">消息通知</view>
   <view class="p-body">
-    <view class="p-title2">基本用法</view>
+    <view class="p-title2">基础用法</view>
     <view class="p-content">
       <button type="primary" bindtap="onShowMessage">主要通知</button>
       <button type="primary" bindtap="onShowMessageSuccess">成功通知</button>

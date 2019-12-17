@@ -1,0 +1,28 @@
+@import "../theme/index.less";
+
+.messi-slideview-container {
+  position: relative;
+  overflow: hidden;
+
+  .messi-slideview {
+    transform: translate3d(0, 0, 0);
+    transition: all .6s cubic-bezier(0.18, 0.89, 0.32, 1);
+
+    &_left,
+    &_right {
+      position: absolute;
+      top     : 0;
+      height  : 100%;
+    }
+
+    &_left {
+      left     : 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    &_right {
+      right    : 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+}

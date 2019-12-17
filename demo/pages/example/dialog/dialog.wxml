@@ -2,7 +2,7 @@
   <view class="p-title">Dialog</view>
   <view class="p-desc">对话框</view>
   <view class="p-body">
-    <view class="p-title2">基本用法</view>
+    <view class="p-title2">基础用法</view>
     <view class="p-content">
       <button type="primary" bindtap="onTipsDialog">提示弹窗</button>
     </view>

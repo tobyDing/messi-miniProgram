@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "ms-slideview":"../../../components/slideview/slideview",
+    "ms-dialog":"../../../components/dialog/dialog"
+  }
 }

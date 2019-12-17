@@ -1,1 +1,21 @@
-/* pages/example/slideview/slideview.wxss */
+.p-body,
+.p-content {
+  padding-left : 0;
+  padding-right: 0;
+}
+
+.sildeview-body {
+  margin-top: 20rpx;
+  padding   : 20rpx;
+  font-size : 30rpx;
+  color     : #333;
+  background: #fff;
+}
+
+.left,
+.right {
+  display   : flex;
+  padding   : 20rpx;
+  color     : #fff;
+  background: red;
+}
