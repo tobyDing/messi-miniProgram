@@ -3,7 +3,8 @@ import { getPageObj, assign, isArray, isEmpty } from '../utils/utils'
 /**
  * todoList
  * * 改变默认值组织方式:单独文件+单独默认值+组件默认值
- * * 探索组件调用方式
+ * * 探索及时加载和loading
+ * * 封装自定义滑动组件
  */
 
 let queue = []
@@ -43,7 +44,7 @@ const MsPicker = options => {
       return
     }
     if (isEmpty(options.defualtValue)) {
-      options.defualtValue = Array.from(options.columns, () => 0)
+      options.defualtValue = picker.createDefalutIndexs()
     }
     picker.setData(options)
     queue.push(picker)

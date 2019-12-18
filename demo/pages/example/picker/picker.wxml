@@ -12,6 +12,10 @@
     <view class="p-content">
       <button type="primary" bindtap="onShowPicker3">多列联动</button>
     </view>
+    <view class="p-content">
+      <button type="primary" bindtap="onShowPicker4">组件调用</button>
+    </view>
   </view>
 </view>
 <ms-pikcer id="ms-picker"></ms-pikcer>
+<ms-pikcer id="ms-picker2" visible="{{visible}}" columns="{{columns}}" bindonConfirm="onConfirm"></ms-pikcer>

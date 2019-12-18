@@ -27,10 +27,8 @@ Component({
       type: Array,
       value: [],
       observer: function (defualtValue) {
-        let defualtValueIndex = this.getIndexs(defualtValue)
         this.setData({
-          defualtValueIndex,
-          resIndexs: defualtValueIndex
+          resIndexs: this.getIndexs(defualtValue)
         })
       }
     },
@@ -60,7 +58,6 @@ Component({
     }
   },
   data: {
-    defualtValueIndex: [],//默认选中值对应的索引
     resIndexs: [],//选中值(索引) 例如：[1,2]
   },
   methods: {
@@ -86,7 +83,7 @@ Component({
         })
       }
       if (indexs.length <= 0) {
-        indexs = Array.from(columns, () => 0)
+        indexs = this.createDefalutIndexs(columns)
       }
       return indexs;
     },
@@ -105,6 +102,13 @@ Component({
         })
       }
       return values
+    },
+    createDefalutIndexs(columns) {
+      /**
+       * 获取默认选中项对应的所
+       */
+      columns = columns || this.data.columns
+      return Array.from(columns, () => 0)
     },
     onChange(ev) {
       /**
@@ -127,7 +131,7 @@ Component({
        * 确认选择
        */
       const { resIndexs = [], defualtValueIndex } = this.data
-      let indexs = resIndexs.length > 0 ? resIndexs : defualtValueIndex
+      let indexs = resIndexs.length > 0 ? resIndexs : this.createDefalutIndexs()
       let values = this.getValues(indexs)
       let detail = {
         indexs,

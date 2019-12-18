@@ -9,7 +9,7 @@
       <view class="messi-picker-hd_confirm" bindtap="onConfirm">{{confirmText}}</view>
     </view>
     <view class="messi-picker-bd">
-      <picker-view indicator-style="height: {{rowHeight}}px;" style="width: 100%; height: {{rowHeight*count}}px;" value="{{defualtValueIndex}}" bindchange="onChange">
+      <picker-view indicator-style="height: {{rowHeight}}px;" style="width: 100%; height: {{rowHeight*count}}px;" value="{{resIndexs}}" bindchange="onChange">
         <picker-view-column wx:for="{{columns}}" wx:for-item="list" wx:for-index="listIndex" wx:key="*this">
           <view wx:for="{{list}}" wx:key="*this" style="line-height: {{rowHeight}}px;text-align:center;">
             {{item}}

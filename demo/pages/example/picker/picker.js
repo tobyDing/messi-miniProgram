@@ -49,5 +49,13 @@ Page({
         }
       }
     })
+  },
+  onShowPicker4() {
+    this.setData({
+      visible: true
+    })
+  },
+  onConfirm(ev) {
+    console.log('ev.detail', ev.detail)
   }
 })
