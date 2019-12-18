@@ -18,17 +18,41 @@ const isFunction = fn => {
    */
   if (fn && typeof fn == 'function') {
     return true
-  } else {
-    return false
   }
+  return false
 }
 
 const isObj = obj => {
+  /**
+   * 判断是否为对象
+   */
   if (obj && Object.prototype.toString.call(obj) === '[object Object]') {
     return true
-  } else {
+  }
+  return false
+}
+
+const isArray = arr => {
+  /**
+   * 判断是否为数组
+   */
+  if (arr && Array.isArray(arr)) {
+    return true
+  }
+  return false
+}
+
+const isEmpty = data => {
+  /**
+   * 判断数组或对象是否为空
+   */
+  if (isObj(data)) {
+    data = Object.keys(data)
+  }
+  if (isArray(data) && data.length > 0) {
     return false
   }
+  return true
 }
 
 export {
@@ -36,4 +60,6 @@ export {
   assign,
   isFunction,
   isObj,
+  isArray,
+  isEmpty,
 }

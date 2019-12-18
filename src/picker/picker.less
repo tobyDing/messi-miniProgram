@@ -1,0 +1,36 @@
+@import "../theme/index.less";
+
+.messi-picker-container {
+  position: fixed;
+  bottom  : 0;
+  left    : 0;
+  right   : 0;
+  z-index : 5000;
+
+  .messi-picker {
+    font-size : @size-md;
+    background: #fff;
+
+    &-hd {
+      display        : flex;
+      justify-content: space-between;
+      height         : 80rpx;
+      line-height    : 80rpx;
+      padding        : 0 @padding-md;
+      .border(bottom);
+
+      &_cancel {
+        color: @color-light5;
+      }
+
+      &_title {
+        flex      : 1;
+        text-align: center;
+      }
+
+      &_confirm {
+        color: @color-primary;
+      }
+    }
+  }
+}
