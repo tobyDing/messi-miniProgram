@@ -1,0 +1,15 @@
+<view wx:if="{{visible}}" class="messi-noticebar-container {{extClass||''}}">
+  <view class="messi-noticebar">
+    <view class="messi-noticebar-left">
+      <view wx:if="{{leftIcon}}" class="messi-noticebar-left_icon ms-iconfont {{leftIcon}}"></view>
+      <slot wx:else name="left"></slot>
+    </view>
+    <view class="messi-noticebar-center {{!multipleRows&&'messi-noticebar-center_overflow'}}">
+      <slot></slot>
+    </view>
+    <view class="messi-noticebar-right">
+      <view wx:if="{{rightIcon}}" class="messi-noticebar-left_icon ms-iconfont {{rightIcon}}" bindtap="onClose"></view>
+      <slot wx:else name="right"></slot>
+    </view>
+  </view>
+</view>

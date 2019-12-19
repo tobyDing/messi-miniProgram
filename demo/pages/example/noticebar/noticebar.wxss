@@ -1,1 +1,5 @@
-/* pages/example/noticebar/noticebar.wxss */
+.p-body,
+.p-content {
+  padding-left : 0;
+  padding-right: 0;
+}

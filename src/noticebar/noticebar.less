@@ -1,0 +1,34 @@
+@import "../theme/index.less";
+
+.messi-noticebar-container {
+  font-size: @size-sm;
+
+  .messi-noticebar {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : @padding-md;
+    color          : @color-orange;
+    background     : @color-orange2;
+
+    &-left {
+      padding-right: @padding-md;
+
+      &_icon {
+        font-size: 34rpx;
+      }
+    }
+
+    &-center {
+      flex: 1;
+
+      &_overflow {
+        .text-overflow()
+      }
+    }
+
+    &-right {
+      padding-left: @padding-md;
+    }
+  }
+}

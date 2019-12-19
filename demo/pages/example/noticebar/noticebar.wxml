@@ -1,2 +1,14 @@
-<!--pages/example/noticebar/noticebar.wxml-->
-<text>pages/example/noticebar/noticebar.wxml</text>
+<view>
+  <view class="p-title">Noticebar</view>
+  <view class="p-desc">通告栏</view>
+  <view class="p-body">
+    <view class="p-title2">单行显示</view>
+    <view class="p-content">
+      <ms-noticebar multipleRows="{{false}}">这是一个通告栏这是一个通告栏这是一个通告栏这是一个通告栏666</ms-noticebar>
+    </view>
+    <view class="p-title2">多行显示</view>
+    <view class="p-content">
+      <ms-noticebar>这是一个通告栏这是一个通告栏这是一个通告栏这是一个通告栏666</ms-noticebar>
+    </view>
+  </view>
+</view>

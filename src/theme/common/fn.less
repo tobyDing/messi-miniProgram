@@ -1,18 +1,32 @@
 /**
 * 边框
 */
-.border{
-  border:1rpx solid #eee;
+.border {
+  border: 1rpx solid #eee;
 }
-.border(@direction) when(@direction=top){
+
+.border(@direction) when(@direction=top) {
   border-top: 1rpx solid #eee;
 }
-.border(@direction) when(@direction=right){
+
+.border(@direction) when(@direction=right) {
   border-right: 1rpx solid #eee;
 }
-.border(@direction) when(@direction=bottom){
+
+.border(@direction) when(@direction=bottom) {
   border-bottom: 1rpx solid #eee;
 }
-.border(@direction) when(@direction=left){
+
+.border(@direction) when(@direction=left) {
   border-left: 1rpx solid #eee;
+}
+
+/**
+* 文本溢出隐藏
+*/
+.text-overflow(@width: 100%) {
+  width        : @width;
+  overflow     : hidden;
+  white-space  : nowrap;
+  text-overflow: ellipsis;
 }
