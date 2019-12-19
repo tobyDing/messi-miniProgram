@@ -1,5 +1,5 @@
 .animation(@name, @duration: 1s, @timing: linear, @count: infinite) {
-  animation: spinning 1s linear infinite;
+  animation: spinning @duration @timing @count;
 }
 
 @keyframes spinning {

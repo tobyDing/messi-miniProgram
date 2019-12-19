@@ -1,36 +1,8 @@
-<view class="list">
-  <ms-listview>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率</view>
-    <view style="padding:20rpx">觉得可抵扣的数据库收视率666</view>
+<view class="list-container">
+  <ms-listview bindonEmitDown="onEmitDown">
+    <!-- <view class="list" wx:for="{{userData.list}}" wx:key="id">
+      <view class="item">{{item.name}} {{item.mobile}}</view>
+      <view class="item">{{item.address}}</view>
+    </view> -->
   </ms-listview>
 </view>
