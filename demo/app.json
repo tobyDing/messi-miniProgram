@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/example/picker/picker",
-    "pages/example/grid/grid",
     "pages/example/noticebar/noticebar",
     "pages/example/listview/listview",
     "pages/example/slideview/slideview",
