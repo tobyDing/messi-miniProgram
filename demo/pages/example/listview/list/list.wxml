@@ -1,8 +1,8 @@
 <view class="list-container">
   <ms-listview bindonEmitDown="onEmitDown">
-    <!-- <view class="list" wx:for="{{userData.list}}" wx:key="id">
+    <view class="list" wx:for="{{userData.list}}" wx:key="id">
       <view class="item">{{item.name}} {{item.mobile}}</view>
       <view class="item">{{item.address}}</view>
-    </view> -->
+    </view>
   </ms-listview>
 </view>

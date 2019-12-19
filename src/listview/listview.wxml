@@ -1,14 +1,16 @@
 <view class="messi-listview-container">
   <view class="messi-listview">
     <scroll-view class="messi-listview-scroll" scroll-y="{{true}}" bindscrolltolower="onEmitDown" lower-threshold="{{lowerThreshold}}" scroll-with-animation enable-back-to-top scroll-anchoring>
-      <view class="messi-listview-scroll-up"></view>
+      <view class="messi-listview-scroll-up">
+        
+      </view>
       <slot></slot>
-      <view class="messi-listview-scroll-down">
-        <view class="loading">
+      <view wx:if="{{downstatus=='loading'||downstatus=='noMoreData'}}" class="messi-listview-scroll-down">
+        <view wx:if="{{downstatus=='loading'}}" class="loading">
           <view class="loading_icon ms-iconfont ms-loading"></view>
-          <view class="">正在加载中...</view>
+          <view class="loading_text">正在加载中...</view>
         </view>
-        <view class=""></view>
+        <view wx:if="{{downstatus=='noMoreData'}}" class="noMoreData">没有更多数据了</view>
       </view>
     </scroll-view>
   </view>

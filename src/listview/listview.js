@@ -13,7 +13,12 @@ Component({
     },
   },
   data: {
-    downstatus: '',//'loading'加载中;'nodata'无内容;
+    downstatus: '',//'loading'加载中;'noMoreData'无内容;
+  },
+  ready() {
+    this.setData({
+      downstatus: 'noMoreData'
+    })
   },
   methods: {
     onEmitDown(ev) {
