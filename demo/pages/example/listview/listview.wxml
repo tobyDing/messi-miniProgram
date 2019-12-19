@@ -1,2 +1,10 @@
-<!--pages/example/listview/listview.wxml-->
-<text>pages/example/listview/listview.wxml</text>
+<view>
+  <view class="p-title">Listview</view>
+  <view class="p-desc">长列表</view>
+  <view class="p-body">
+    <view class="p-title2">基础用法</view>
+    <view class="p-content">
+      <button type="primary" bindtap="onJump">下拉刷新上拉加载</button>
+    </view>
+  </view>
+</view>

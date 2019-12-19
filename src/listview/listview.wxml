@@ -1,0 +1,5 @@
+<view class="messi-listview-container">
+  <view class="messi-listview">
+    <slot></slot>
+  </view>
+</view>
