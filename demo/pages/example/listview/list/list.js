@@ -23,7 +23,7 @@ Page({
     })
   },
   loadData: function (page = 1) {
-    console.log('page', page)
+    // console.log('page', page)
     return new Promise((resolve) => {
       setTimeout(() => {
         let res = {}

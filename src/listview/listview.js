@@ -42,46 +42,53 @@ Component({
   },
   data: {
     upHeight: 0,//下拉加载区域高度
+    isLockUp: false,//锁定下拉刷新
+    isLockDown: false,//锁住上拉加载
   },
   ready() {
     this.scrollTop = 0
-    // this.setUpStatus('drop')
   },
   methods: {
     onScroll(ev) {
-      // console.log('ev', ev)
       const { scrollTop } = ev.detail
-      // console.log('scrollTop', scrollTop)
       this.scrollTop = scrollTop
       this.triggerEvent('onScroll', ev)
     },
     onDragStart(ev) {
-      // console.log('onDragStart.ev', ev)
+      let { upStatus, isLockUp } = this.data
+      if (upStatus == 'loading' && isLockUp) {
+        return;
+      }
       const { touches } = ev
       const touch = touches[0]
       this.pageX = touch.pageX
       this.pageY = touch.pageY
     },
     onDragMove(ev) {
-      // console.log('onDragMove.ev', ev)
       const { touches } = ev
       const touch = touches[0]
       let offsetX = touch.pageX - this.pageX
       let offsetY = touch.pageY - this.pageY
       let absOffsetX = Math.abs(offsetX)
       let absOffsetY = Math.abs(offsetY)
-      let { upHeight, upStatus } = this.data;
-      // console.log('this.scrollTop', this.scrollTop)
+      let { upHeight, upStatus, isLockUp } = this.data
+      if (upStatus == 'loading' && isLockUp) {
+        return;
+      }
       if (absOffsetY - absOffsetX > 0 && offsetY > 0 && this.scrollTop <= 0) {//纵向且向下滑动 且 scroll-view正在顶部
-        console.log('absOffsetY', absOffsetY)
+        if (absOffsetY < Distance * 0.2) {
+          return
+        }
         if (absOffsetY <= Distance) {//第一阶段 下拉刷新
           upHeight = absOffsetY
           upStatus = 'drop'
-        } else if (Distance < absOffsetY && absOffsetY <= Distance * 2) {//第二阶段 释放刷新
-          upHeight = Distance + (absOffsetY - Distance) * 0.5
+        } else if (Distance < absOffsetY) {//第二阶段 释放刷新
+          if (absOffsetY <= Distance * 2) {
+            upHeight = Distance + (absOffsetY - Distance) * 0.5
+          } else {
+            upHeight = Distance + Distance * 0.5 + (absOffsetY - Distance * 2) * 0.2
+          }
           upStatus = 'release'
-        } else {
-          upHeight = Distance + Distance * 0.5 + (absOffsetY - Distance * 2) * 0.2
         }
         upHeight = upHeight * 0.7 //移动距离衰减
         this.setData({
@@ -92,20 +99,61 @@ Component({
     },
     onDragEnd() {
       if (this.scrollTop <= 0) {//scroll-view正在顶部
-        let { upHeight, upStatus } = this.data;
+        let { upHeight, upStatus, isLockUp } = this.data;
+        if (upStatus == 'loading' && isLockUp) {
+          return
+        }
         if (upStatus == 'release') {
           upHeight = Distance
           upStatus = 'loading'
           this.onEmitUp()
         } else {
           upHeight = 0
-          upStatus = 'release'
+          upStatus = ''
         }
         this.setData({
           upHeight,
           upStatus
         })
       }
+    },
+    lock(direction) {
+      /**
+       * 锁定
+       */
+      let { isLockUp, isLockDown } = this.data
+      switch (direction) {
+        case 'up':
+          isLockUp = true
+        case 'down':
+          isLockDown = true
+        default:
+          isLockUp = true
+          isLockDown = true
+      }
+      this.setData({
+        isLockUp,
+        isLockDown
+      })
+    },
+    unlock(direction) {
+      /**
+       * 解锁
+       */
+      let { isLockUp, isLockDown } = this.data
+      switch (direction) {
+        case 'up':
+          isLockUp = false
+        case 'down':
+          isLockDown = false
+        default:
+          isLockUp = false
+          isLockDown = false
+      }
+      this.setData({
+        isLockUp,
+        isLockDown
+      })
     },
     onEmitUp(ev) {
       /**
@@ -125,6 +173,10 @@ Component({
       /**
        * 上拉加载事件
        */
+      const { downstatus, isLockDown } = this.data
+      if (downstatus == 'loading' && isLockDown) {
+        return
+      }
       this.triggerEvent('onEmitDown')
     },
     setDownStatus(status = '') {
