@@ -1,17 +1,24 @@
 <view class="messi-listview-container">
-  <view class="messi-listview">
-    <scroll-view class="messi-listview-scroll" scroll-y="{{true}}" bindscrolltolower="onEmitDown" lower-threshold="{{lowerThreshold}}" scroll-with-animation enable-back-to-top scroll-anchoring>
-      <view class="messi-listview-scroll-up">
-        
+  <scroll-view class="messi-listview-scroll" scroll-y="{{true}}" bindscroll="onScroll" bindscrolltolower="{{(mode=='down'||mode=='all')?'onEmitDown':''}}" lower-threshold="{{lowerThreshold}}" scroll-with-animation enable-back-to-top scroll-anchoring>
+    <view class="messi-listview" bindtouchstart="{{(mode=='up'||mode=='all')?'onDragStart':''}}" bindtouchmove="{{(mode=='up'||mode=='all')?'onDragMove':''}}" bindtouchend="{{(mode=='up'||mode=='all')?'onDragEnd':''}}" bindtouchcancel="{{(mode=='up'||mode=='all')?'onDragEnd':''}}">
+      <view wx:if="{{upStatus=='drop'||upStatus=='release'||upStatus=='loading'}}" class="messi-listview-up" style="height:{{upHeight}}rpx">
+        <view wx:if="{{upStatus=='drop'||upStatus=='release'}}" class="messi-listview-up-status">
+          <view class="status_icon status_icon_before {{upStatus=='release' && 'status_icon_before_rotateUp'}} ms-iconfont ms-arrowUp"></view>
+          <view class="status_text">{{upStatus=='drop'?'下拉刷新':'释放刷新'}}</view>
+        </view>
+        <view wx:else="{{upStatus=='loading'}}" class="messi-listview-up-status">
+          <view class="status_icon status_icon_loading ms-iconfont ms-loading"></view>
+          <view class="status_text">刷新中...</view>
+        </view>
       </view>
       <slot></slot>
-      <view wx:if="{{downstatus=='loading'||downstatus=='noMoreData'}}" class="messi-listview-scroll-down">
+      <view wx:if="{{downstatus=='loading'||downstatus=='noMoreData'}}" class="messi-listview-down">
         <view wx:if="{{downstatus=='loading'}}" class="loading">
-          <view class="loading_icon ms-iconfont ms-loading"></view>
-          <view class="loading_text">正在加载中...</view>
+          <view class="loading_icon ms-iconfont {{downLoadingIcon}}"></view>
+          <view class="loading_text">{{downLoadingText}}</view>
         </view>
-        <view wx:if="{{downstatus=='noMoreData'}}" class="noMoreData">没有更多数据了</view>
+        <view wx:if="{{downstatus=='noMoreData'}}" class="noMoreData">{{noMoreData}}</view>
       </view>
-    </scroll-view>
-  </view>
+    </view>
+  </scroll-view>
 </view>

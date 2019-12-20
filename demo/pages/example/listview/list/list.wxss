@@ -7,7 +7,7 @@
 }
 
 .list {
-  margin-top: 10rpx;
+  margin-bottom: 10rpx;
   padding   : 20rpx;
   font-size : 30rpx;
   background: #fff;

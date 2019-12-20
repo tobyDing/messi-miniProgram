@@ -1,6 +1,6 @@
-
 const MaxConut = 3
-const PageNum = 10
+const PageNum = 20
+let listview = ''
 Page({
   data: {
     userData: {
@@ -9,7 +9,14 @@ Page({
     }
   },
   onLoad() {
-    this.loadData().then((res) => {
+    listview = this.selectComponent('#ms-listview')
+    listview.setDownStatus('loading')
+    this.loadData().then(res => {
+      if (res.list.length < PageNum) {
+        listview.setDownStatus('noMoreData')
+      } else {
+        listview.setDownStatus()
+      }
       this.setData({
         userData: res
       })
@@ -38,7 +45,7 @@ Page({
           }
         } else {
           res = {
-            page,
+            page: page <= 1 ? page : --page,
             count: MaxConut,
             list: []
           }
@@ -47,15 +54,27 @@ Page({
       }, 1000)
     })
   },
+  onEmitUp() {
+    this.loadData(1).then(res => {
+      listview.setUpStatus()
+      this.setData({
+        userData: res
+      })
+    })
+  },
   onEmitDown() {
     let { userData: { page, list } } = this.data;
-    this.loadData(++page).then((res) => {
-      if (res.list.length >= PageNum) {
-        res.list = list.concat(res.list)
-        this.setData({
-          userData: res
-        })
+    listview.setDownStatus('loading')
+    this.loadData(++page).then(res => {
+      if (res.list.length < PageNum) {
+        listview.setDownStatus('noMoreData')
+      } else {
+        listview.setDownStatus()
       }
+      res.list = list.concat(res.list)
+      this.setData({
+        userData: res
+      })
     })
   }
 })
