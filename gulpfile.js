@@ -57,7 +57,7 @@ gulp.task('components', async () => {
     .pipe(gulp.dest(componentsDist))
 })
 
-gulp.task('create-componet', async () => {
+gulp.task('create-component', async () => {
   const compName = process.env.npm_config_comp;
   if (!compName) {
     console.log('请参考用法:', `${'npm run create --comp=组件名'}`.green)

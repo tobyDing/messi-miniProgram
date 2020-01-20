@@ -8,7 +8,7 @@
     "watch": "gulp watch",
     "build": "gulp dev --build",
     "project": "gulp demo-project",
-    "create": "gulp create-componet"
+    "create": "gulp create-component"
   },
   "miniprogram": "miniprogram_dist",
   "repository": {
