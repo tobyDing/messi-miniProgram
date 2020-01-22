@@ -1,0 +1,13 @@
+.ms-transition{
+  transition-timing-function: ease;
+}
+
+.ms-fade-enter-active,
+.ms-fade-leave-active {
+  transition-property: opacity;
+}
+
+.ms-fade-enter,
+.ms-fade-leave-to {
+  opacity: 0;
+}

@@ -1,0 +1,5 @@
+<view class="ms-loading">
+  <view class="ms-loading-icon ms-loading-spinner_rotate ms-loading-spinner_{{type}}" style="color:{{color}};font-size:{{size}};">
+    <view wx:if="{{type=='spinner'}}" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="index" class="ms-loading-spinner_spinner__dot"></view>
+  </view>
+</view>
