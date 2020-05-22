@@ -1,0 +1,23 @@
+<view>
+  <view class="p-title">Icon</view>
+  <view class="p-desc">图标</view>
+  <view class="p-body">
+    <view class="p-title2">基础用法</view>
+    <view class="p-content">
+      <ms-icon custom-class="mr-20" name="success" />
+      <ms-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png" />
+    </view>
+    <view class="p-title2">图标颜色</view>
+    <view class="p-content">
+      <ms-icon custom-class="mr-20" name="success" color="red" />
+      <ms-icon custom-class="mr-20" name="success" color="blue" />
+      <ms-icon custom-class="mr-20" name="success" color="green" />
+    </view>
+    <view class="p-title2">图标大小</view>
+    <view class="p-content">
+      <ms-icon custom-class="mr-20" name="success" size="16px" />
+      <ms-icon custom-class="mr-20" name="success" size="20px" />
+      <ms-icon custom-class="mr-20" name="success" size="24px" />
+    </view>
+  </view>
+</view>

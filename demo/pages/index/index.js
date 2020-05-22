@@ -3,6 +3,14 @@ Page({
   data: {
     list: [
       {
+        id: 'Base Component',
+        name: '基础组件',
+        icon: 'messifont-base',
+        open: false,
+        child: ['icon', 'button'],
+        devChild: ['tab']
+      },
+      {
         id: 'Data Entry',
         name: '数据输入',
         icon: 'messifont-entry',

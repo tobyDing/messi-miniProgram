@@ -37,3 +37,23 @@ page {
 .view-hover-opacity {
   opacity: 0.5;
 }
+
+.ma-20{
+  margin: 20rpx;
+}
+
+.mt-20{
+  margin-top: 20rpx;
+}
+
+.mb-20{
+  margin-bottom: 20rpx;
+}
+
+.mr-20{
+  margin-right: 20rpx;
+}
+
+.ml-20{
+  margin-left: 20rpx;
+}

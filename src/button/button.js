@@ -3,8 +3,12 @@ Component({
     multipleSlots: true,
     addGlobalClass: true
   },
-  externalClasses: ['custom-class'],
-  properties: {},
+  properties: {
+    extClass: {
+      type: String,
+      value: ''
+    },
+  },
   data: {},
   methods: {}
 })
