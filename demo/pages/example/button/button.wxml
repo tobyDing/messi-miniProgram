@@ -1,0 +1,42 @@
+<view>
+  <view class="p-title">Button</view>
+  <view class="p-desc">按钮</view>
+  <view class="p-body">
+    <view class="p-title2">按钮类型</view>
+    <view class="p-content">
+      <!-- <button type="primary">微信按钮</button> -->
+      <ms-button type="default">默认按钮</ms-button>
+      <ms-button type="primary" bindclick="onClick">主要按钮</ms-button>
+    </view>
+    <view class="p-title2">朴素按钮</view>
+    <view class="p-content">
+      <ms-button type="primary" plain>朴素按钮</ms-button>
+    </view>
+    <view class="p-title2">各种状态</view>
+    <view class="p-content">
+      <ms-button type="primary" disabled >禁用状态</ms-button>
+      <ms-button type="primary" loading >禁用状态</ms-button>
+      <ms-button type="primary" plain loading >禁用状态</ms-button>
+      <ms-button type="default" loading >禁用状态</ms-button>
+    </view>
+    <view class="p-title2">按钮形状</view>
+    <view class="p-content">
+      <ms-button type="primary" plain round>朴素圆按钮</ms-button>
+      <ms-button type="primary" round>圆按钮</ms-button>
+      <ms-button type="primary" plain square>朴素方按钮</ms-button>
+      <ms-button type="primary" square>方按钮</ms-button>
+    </view>
+    <view class="p-title2">图标按钮</view>
+    <view class="p-content">
+      <ms-button type="primary" icon="success">图标按钮</ms-button>
+    </view>
+    <view class="p-title2">按钮尺寸</view>
+    <view class="p-content">
+      <ms-button type="primary" width="200px" height="35px">按钮尺寸</ms-button>
+    </view>
+    <view class="p-title2">块级元素</view>
+    <view class="p-content">
+      <ms-button type="primary" block>块级元素</ms-button>
+    </view>
+  </view>
+</view>

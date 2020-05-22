@@ -1,0 +1,12 @@
+<button 
+  class="ms-button ms-button--{{type}} {{plain?'ms-button--plain':''}} {{disabled?'ms-button--disabled':''}} {{loading?'ms-button--loading':''}} {{round?'ms-button--round':''}} {{square?'ms-button--square':''}} {{block?'ms-button--block':''}} custom-class"
+  hover-class="ms-button--active"
+  style="width:{{width}};height:{{height}};{{customStyle}}"
+  bindtap="onClick"
+>
+  <view wx:if="{{loading||icon}}" class="ms-button__icon">
+    <ms-loading wx:if="{{loading}}" width="20px" height="20px" color="{{ type === 'default' || plain ? '#c9c9c9' : '#fff' }}" />
+    <ms-icon wx:elif="{{icon}}" name="{{icon}}" />
+  </view>
+   <slot></slot>
+</button>

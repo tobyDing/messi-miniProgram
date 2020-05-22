@@ -1,0 +1,113 @@
+
+.ms-loading{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ms-loading-icon{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.ms-loading-spinner_rotate{
+  animation: rotate 1s infinite linear;
+}
+
+.ms-loading-spinner_circular{
+  border: 1rpx solid transparent;
+  border-top-color: currentColor;/*currentColor是css3中扩展的关键字，具体意思就是使用该关键字的元素的（或其最近父元素）color属性的颜色值*/
+  border-radius: 100%;
+}
+
+.ms-loading-spinner_spinner{
+  position: relative;
+  animation-timing-function: steps(12);
+}
+
+.ms-loading-spinner_spinner__dot{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ms-loading-spinner_spinner__dot::before{
+  content: '';
+  display: block;
+  width: 2px;
+  height: 25%;
+  margin: 0 auto;
+  background-color: currentColor;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(1){
+  transform: rotate(30deg);
+  opacity: 1;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(2){
+  transform: rotate(60deg);
+  opacity: .9375;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(3){
+  transform: rotate(90deg);
+  opacity: .875;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(4){
+  transform: rotate(120deg);
+  opacity: .8125;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(5){
+  transform: rotate(150deg);
+  opacity: .75;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(6){
+  transform: rotate(180deg);
+  opacity: .6875;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(7){
+  transform: rotate(210deg);
+  opacity: .625;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(8){
+  transform: rotate(240deg);
+  opacity: .5625;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(9){
+  transform: rotate(270deg);
+  opacity: .5;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(10){
+  transform: rotate(300deg);
+  opacity: .4375;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(11){
+  transform: rotate(330deg);
+  opacity: .375;
+}
+
+.ms-loading-spinner_spinner__dot:nth-child(12){
+  transform: rotate(360deg);
+  opacity: .3125;
+}
+
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

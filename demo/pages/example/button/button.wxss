@@ -1,0 +1,3 @@
+.p-content button{
+  margin: 20rpx;
+}

@@ -1,6 +1,6 @@
 <view 
   class="ms-iconfont {{isImageName?'ms-icon--image':prefix + name}} custom-class" 
-  style="font-size:{{size}};color:{{color}};{{custom-style}}"
+  style="font-size:{{size}};color:{{color}};{{customStyle}}"
 >
   <image 
     wx:if="{{isImageName}}" 
