@@ -11,7 +11,8 @@
     "pages/example/dialog/dialog",
     "pages/example/actionsheet/actionsheet",
     "pages/example/icon/icon",
-    "pages/example/button/button"
+    "pages/example/button/button",
+    "pages/example/layout/layout"
   ],
   "window": {
     "backgroundTextStyle": "light",
