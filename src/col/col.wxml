@@ -1,0 +1,3 @@
+<view class="custom-class ms-col ms-col--{{span}} ms-col--offset-{{offset}}" style="{{style}}">
+  <slot></slot>
+</view>

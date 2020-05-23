@@ -4,7 +4,26 @@
   <view class="p-body">
     <view class="p-title2">基础用法</view>
     <view class="p-content">
-
+      <ms-row>
+        <ms-col custom-class="col" span="8">span-8</ms-col>
+        <ms-col custom-class="col2" span="8">span-8</ms-col>
+        <ms-col custom-class="col" span="8">span-8</ms-col>
+      </ms-row>
+    </view>
+    <view class="p-title2">列偏移</view>
+    <view class="p-content">
+      <ms-row>
+        <ms-col custom-class="col" span="8">span-8</ms-col>
+        <ms-col custom-class="col2" span="8" offset="6">span-8 offset-6</ms-col>
+      </ms-row>
+    </view>
+    <view class="p-title2">列间距</view>
+    <view class="p-content">
+      <ms-row gutter="20">
+        <ms-col custom-class="col" span="8">span-8</ms-col>
+        <ms-col custom-class="col2" span="8">span-8</ms-col>
+        <ms-col custom-class="col" span="8">span-8</ms-col>
+      </ms-row>
     </view>
   </view>
 </view>
