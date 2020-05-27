@@ -1,0 +1,10 @@
+<view>
+  <view class="p-title">Icon</view>
+  <view class="p-desc">图标</view>
+  <view class="p-body">
+    <view class="p-title2">基础用法</view>
+    <view class="p-content">
+      <ms-image src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    </view>
+  </view>
+</view>

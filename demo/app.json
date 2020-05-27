@@ -12,7 +12,8 @@
     "pages/example/actionsheet/actionsheet",
     "pages/example/icon/icon",
     "pages/example/button/button",
-    "pages/example/layout/layout"
+    "pages/example/layout/layout",
+    "pages/example/image/image"
   ],
   "window": {
     "backgroundTextStyle": "light",
