@@ -1,0 +1,39 @@
+.ms-image {
+  position: relative;
+  display : inline-block;
+}
+
+.ms-image__flex{
+  display: flex;
+}
+
+.ms-image__round {
+  overflow     : hidden;
+  border-radius: 50%;
+}
+
+.ms-image-img {
+  display      : block;
+  width        : 100%;
+  height       : 100%;
+  border-radius: inherit;
+}
+
+.ms-image-loading,
+.ms-image-error {
+  position       : absolute;
+  top            : 0;
+  bottom         : 0;
+  left           : 0;
+  right          : 0;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  color          : #969799;
+  font-size      : 28rpx;
+  background     : #f7f8fa;
+}
+
+.ms-image-error {
+  font-size: 24rpx;
+}
