@@ -1,43 +1,52 @@
-/**
- * TodoList
- * * 后续增加滚动显示
- */
+
 Component({
   options: {
     multipleSlots: true,
     addGlobalClass: true
   },
+  externalClasses: ['custom-class'],
   properties: {
-    visible: {
-      type: Boolean,
-      value: true
-    },
-    extClass: {
+    leftIcon: {
       type: String,
       value: ''
     },
-    leftIcon: {
+    text: {
       type: String,
-      value: 'ms-notice'
+      value: ''
     },
-    rightIcon: {
+    color: {
       type: String,
-      value: 'ms-close'
+      value: ''
     },
-    multipleRows: {
+    background: {
+      type: String,
+      value: ''
+    },
+    wrapable: {
       type: Boolean,
-      value: true
+      value: false
+    },
+    scrollable: {
+      type: Boolean,
+      value: false
+    },
+    speed: {
+      type: String,
+      value: '12'
+    },
+    closeable: {
+      type: Boolean,
+      value: false
     }
   },
-  data: {},
+  data: {
+    show: true
+  },
   methods: {
     onClose() {
-      const { rightIcon } = this.data;
-      if (rightIcon === 'ms-close') {
-        this.setData({
-          visible: false
-        })
-      }
+      this.setData({
+        show: false
+      })
     }
   }
 })

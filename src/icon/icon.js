@@ -34,5 +34,9 @@ Component({
   data: {
     isImageName: false//是否为图片链接
   },
-  methods: {}
+  methods: {
+    onClick() {
+      this.triggerEvent('click')
+    }
+  }
 })
