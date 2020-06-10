@@ -15,7 +15,7 @@ Page({
         name: '数据输入',
         icon: 'messifont-entry',
         open: false,
-        child: ['picker'],
+        child: ['field', 'picker'],
         devChild: ['tab']
       },
       {

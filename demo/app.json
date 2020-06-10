@@ -13,7 +13,8 @@
     "pages/example/icon/icon",
     "pages/example/button/button",
     "pages/example/layout/layout",
-    "pages/example/image/image"
+    "pages/example/image/image",
+    "pages/example/field/field"
   ],
   "window": {
     "backgroundTextStyle": "light",
