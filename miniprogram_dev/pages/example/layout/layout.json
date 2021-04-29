@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ms-row": "/components/row/row",
+    "ms-col": "/components/col/col"
+  }
+}

@@ -1,0 +1,59 @@
+@import "./css/iconfont.wxss";
+page {
+  color: #333;
+  background: #f2f2f2;
+}
+
+.p-title {
+  padding: 30rpx 40rpx 15rpx;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.p-desc {
+  padding: 0 40rpx 20rpx;
+  font-size: 26rpx;
+  color: #777;
+}
+
+.p-body {
+  padding: 20rpx 20rpx 100rpx;
+}
+
+.p-title2 {
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+
+.p-content{
+  padding: 20rpx;
+}
+
+.p-content button {
+  margin: 15rpx auto;
+}
+
+.view-hover-opacity {
+  opacity: 0.5;
+}
+
+.ma-20{
+  margin: 20rpx;
+}
+
+.mt-20{
+  margin-top: 20rpx;
+}
+
+.mb-20{
+  margin-bottom: 20rpx;
+}
+
+.mr-20{
+  margin-right: 20rpx;
+}
+
+.ml-20{
+  margin-left: 20rpx;
+}

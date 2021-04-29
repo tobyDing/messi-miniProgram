@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ms-mask": "../mask/mask"
+  }
+}

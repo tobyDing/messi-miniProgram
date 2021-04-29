@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ms-noticebar": "../../../components/noticebar/noticebar"
+  }
+}

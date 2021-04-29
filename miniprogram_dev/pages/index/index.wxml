@@ -1,0 +1,25 @@
+<view class="page">
+  <view class="page_hd">
+    <view class="page_hd_title">messi-miniprogram</view>
+    <view class="page_hd_desc">这是一套基于微信小程序的扩展组件库，为原生小程序开发者提供开箱即用、简单可靠的微信小程序组件库。</view>
+  </view>
+  <view class="page_bd">
+    <view class="card" wx:for="{{list}}" wx:key="id">
+      <view class="card-hd" bindtap="onSwitch" data-index="{{index}}" hover-class="view-hover-opacity">
+        <view class="card-hd_name">{{item.name}}</view>
+        <view class="messifont {{item.icon}}"></view>
+      </view>
+      <view class="card-bd {{item.open?'card-bd_open':''}}">
+        <view class="card-bd_wrap {{item.open?'card-bd_wrap_open':''}}">
+          <view class="card-bd_item" wx:for="{{item.child}}" wx:for-item="iitem" wx:for-index="iindex" wx:key="*this" bindtap="onJump" data-txt="{{iitem}}" hover-class="view-hover-opacity">
+            <view class="card-bd_item_name">{{iitem}}</view>
+            <view class="messifont messifont-right"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page_ft">
+    <text class="page_ft_txt">By MESSI UI</text>
+  </view>
+</view>

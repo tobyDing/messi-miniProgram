@@ -1,0 +1,18 @@
+<view 
+  wx:if="{{show}}"
+  class="custom-class kb-notice-bar {{wrapable?'kb-notice-bar--wrapable':''}} {{scrollable?'kb-notice-bar--scrollable':''}}" 
+  style="color:{{color}};background:{{background}};"
+>
+  <ms-icon wx:if="{{leftIcon}}" class="kb-notice-bar__left-icon" name="{{leftIcon}}" size="32rpx"/>
+  <slot wx:else name="left-icon"></slot>
+
+  <view class="kb-notice-bar__wrap">
+    <view 
+      class="kb-notice-bar__content {{scrollable?'':'kb-notice-bar__ellipsis'}}" 
+      style="-webkit-animation-duration:{{speed}}s;animation-duration:{{speed}}s;"
+    >{{text}}</view>
+  </view>
+
+  <ms-icon wx:if="{{closeable}}" class="kb-notice-bar__right-icon" name="close" size="32rpx" bindclick="onClose"/>
+  <slot wx:else name="right-icon"></slot>
+</view>

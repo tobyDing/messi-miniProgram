@@ -1,0 +1,13 @@
+<view>
+  <view class="p-title">Actionsheet</view>
+  <view class="p-desc">操作菜单</view>
+  <view class="p-body">
+    <view class="p-title2">基础用法</view>
+    <view class="p-content">
+      <button type="primary" bindtap="onShowActionsheet">底部弹出</button>
+      <button type="primary" bindtap="onShowActionsheet2">底部弹出-带描述</button>
+      <button type="primary" bindtap="onShowActionsheet3">中间弹出</button>
+    </view>
+  </view>
+</view>
+<ms-actionsheet id="ms-actionsheet"></ms-actionsheet>

@@ -1,0 +1,21 @@
+<ms-mask wx:if="{{mask}}" visible="{{visible}}" bindtap="onClose"></ms-mask>
+<view wx:if="{{visible}}" class="messi-actionsheet-container {{extClass}} {{position=='center'?'messi-actionsheet-container_center':'messi-actionsheet-container_bottom'}}" style="width:{{width}}">
+  <view class="messi-actionsheet">
+    <view class="messi-actionsheet-bd">
+      <block wx:if="{{actions && actions.length>0}}">
+        <view class="messi-actionsheet-item {{item.className||''}}" wx:for="{{actions}}" wx:key="*this" bindtap="onSelect" data-index="{{index}}" data-action="{{item.action}}">
+          <text class="messi-actionsheet-item_text">{{item.name}}</text>
+          <text class="messi-actionsheet-item_desc">{{item.desc}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <slot></slot>
+      </block>
+    </view>
+    <view class="messi-actionsheet-ft">
+      <view wx:if="{{showCancel}}" class="messi-actionsheet-item messi-actionsheet-item_cancel {{showCancelGap?'showCancelGap':''}}" bindtap="onCancel">
+        {{cancelText||'取消'}}
+      </view>
+    </view>
+  </view>
+</view>

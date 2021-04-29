@@ -1,0 +1,9 @@
+/**
+* 边框
+*/
+.border {
+  border: 1rpx solid #eee;
+}
+/**
+* 文本溢出隐藏
+*/

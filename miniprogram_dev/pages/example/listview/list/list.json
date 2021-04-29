@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ms-listview":"../../../../components/listview/listview"
+  }
+}

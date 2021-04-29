@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ms-loading": "../loading/loading",
+    "ms-icon": "../icon/icon"
+  }
+}

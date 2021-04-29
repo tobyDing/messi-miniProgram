@@ -1,0 +1,10 @@
+<view>
+  <view class="p-title">Field</view>
+  <view class="p-desc">表单中的输入框组件</view>
+  <view class="p-body">
+    <view class="p-title2">基本用法</view>
+    <view class="p-content">
+      <ms-field></ms-field>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<view>
+  <view class="p-title">Noticebar</view>
+  <view class="p-desc">通告栏</view>
+  <view class="p-body">
+    <view class="p-title2">单行显示</view>
+    <view class="p-content">
+      <view class="mb-20">
+        <ms-noticebar leftIcon="notice" text="西藏移民警察助力2020珠峰高程测量登山队成功登顶"></ms-noticebar>
+      </view>
+      <view class="mb-20">
+        <ms-noticebar leftIcon="notice" text="超出隐藏---西藏移民警察助力2020珠峰高程测量登山队成功登顶西藏移民警察助力2020珠峰高程测量登山队成功登顶。"></ms-noticebar>
+      </view>
+      <view class="mb-20">
+        <ms-noticebar leftIcon="notice" text="滚动显示---西藏移民警察助力2020珠峰高程测量登山队成功登顶" scrollable></ms-noticebar>
+      </view>
+      <view class="mb-20">
+        <ms-noticebar leftIcon="notice" text="滚动显示---改变速度---西藏移民警察助力2020珠峰高程测量登山队成功登顶" scrollable speed="8"></ms-noticebar>
+      </view>
+    </view>
+    <view class="p-title2">多行显示</view>
+    <view class="p-content">
+      <view class="mb-20">
+        <ms-noticebar leftIcon="notice" text="2020珠峰高程测量登山队成功登顶珠穆朗玛峰，西藏日喀则珠峰边境派出所顺利完成保障任务。" wrapable></ms-noticebar>
+      </view>
+      <view class="mb-20">
+        <ms-noticebar text="2020珠峰高程测量登山队成功登顶珠穆朗玛峰，西藏日喀则珠峰边境派出所顺利完成保障任务。" wrapable></ms-noticebar>
+      </view>
+    </view>
+    <view class="p-title2">自定义左右插槽内容</view>
+    <view class="p-content">
+      <ms-noticebar text="西藏移民警察助力2020珠峰高程测量登山队成功登顶">
+        <view slot="left-icon" class="mr-20">[左侧插槽]</view>
+        <view slot="right-icon" class="ml-20">[右侧插槽]</view>
+      </ms-noticebar>
+    </view>
+    <view class="p-title2">可关闭的</view>
+    <view class="p-content">
+      <ms-noticebar text="西藏移民警察助力2020珠峰高程测量登山队成功登顶" closeable></ms-noticebar>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ms-actionsheet":"../../../components/actionsheet/actionsheet"
+  }
+}

@@ -1,0 +1,18 @@
+.list-container {
+  position: fixed;
+  top     : 0;
+  right   : 0;
+  bottom  : 0;
+  left    : 0;
+}
+
+.list {
+  margin-bottom: 10rpx;
+  padding   : 20rpx;
+  font-size : 30rpx;
+  background: #fff;
+}
+
+.item {
+  display: flex;
+}

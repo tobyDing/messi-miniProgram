@@ -1,0 +1,12 @@
+<view 
+  class="ms-iconfont {{isImageName?'ms-icon--image':prefix + name}} custom-class" 
+  style="font-size:{{size}};color:{{color}};{{customStyle}}"
+  bindtap="onClick"
+>
+  <image 
+    wx:if="{{isImageName}}" 
+    class="ms-icon__image" 
+    src="{{name}}" 
+    mode="aspectFit" 
+  />
+</view>

@@ -1,0 +1,11 @@
+<view class="messi-slideview-container {{extClass||''}}" bindtouchstart="onDragStart" bindtouchmove="onDragMove" bindtouchend="onDragEnd" bindtouchcancel="onDragEnd">
+  <view class="messi-slideview" style="{{slideStyle}}">
+    <view class="messi-slideview_left">
+      <slot name="left"></slot>
+    </view>
+    <slot></slot>
+    <view class="messi-slideview_right">
+      <slot name="right"></slot>
+    </view>
+  </view>
+</view>

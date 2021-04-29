@@ -1,0 +1,21 @@
+<view>
+  <view class="p-title">Picker</view>
+  <view class="p-desc">选择器</view>
+  <view class="p-body">
+    <view class="p-title2">基础用法</view>
+    <view class="p-content">
+      <button type="primary" bindtap="onShowPicker">基础用法</button>
+    </view>
+    <view class="p-content">
+      <button type="primary" bindtap="onShowPicker2">默认选中</button>
+    </view>
+    <view class="p-content">
+      <button type="primary" bindtap="onShowPicker3">多列联动</button>
+    </view>
+    <view class="p-content">
+      <button type="primary" bindtap="onShowPicker4">组件调用</button>
+    </view>
+  </view>
+</view>
+<ms-pikcer id="ms-picker"></ms-pikcer>
+<ms-pikcer id="ms-picker2" visible="{{visible}}" columns="{{columns}}" bindonConfirm="onConfirm"></ms-pikcer>

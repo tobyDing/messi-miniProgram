@@ -1,0 +1,9 @@
+<view class="ms-image ms-image__{{layout}} custom-class {{round&&'ms-image__round'}}" style="width:{{width}}rpx;height:{{height}}rpx;{{customStyle}}">
+  <image class="ms-image-img image-class" src="{{src}}" mode="{{mode}}" lazy-load="{{lazyLoad}}" bindload="onImgLoad" binderror="onImgError"/>
+  <view wx:if="{{loading && showLoading}}" class="ms-image-loading">
+    <ms-loading type="spinner" />
+  </view>
+  <view wx:if="{{error && showError}}" class="ms-image-error">
+    加载失败
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="custom-class ms-row">
+  <slot></slot>
+</view>

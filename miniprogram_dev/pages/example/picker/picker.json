@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ms-pikcer": "../../../components/picker/picker"
+  }
+}

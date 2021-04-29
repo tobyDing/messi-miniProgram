@@ -1,0 +1,13 @@
+.col {
+  height         : 60rpx;
+  line-height    : 60rpx;
+  background     : #ccc;
+  background-clip: content-box;
+}
+
+.col2 {
+  height         : 60rpx;
+  line-height    : 60rpx;
+  background     : #999;
+  background-clip: content-box;
+}
