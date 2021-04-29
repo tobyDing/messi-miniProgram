@@ -7,7 +7,7 @@ Page({
         name: '基础组件',
         icon: 'messifont-base',
         open: false,
-        child: ['icon', 'button', 'layout', 'image'],
+        child: ['icon', 'button', 'layout', 'image', 'cell'],
         devChild: ['tab']
       },
       {

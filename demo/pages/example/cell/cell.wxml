@@ -1,0 +1,10 @@
+<view>
+  <view class="p-title">Cell</view>
+  <view class="p-desc">单元格</view>
+  <view class="p-body">
+    <view class="p-title2">基本用法</view>
+    <view class="p-content">
+      <ms-cell title="单元格"></ms-cell>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view
+  class="ms-cell custom-class"
+  style="{{customStyle}}"
+>
+  <kb-icon></kb-icon>
+</view>
